@@ -1,0 +1,11 @@
+<div class="start">
+	<h1>BIG BANG BARBEQUE!</h1>
+	<img src="images/DLBi-icon.png" class="logo" alt="DigitasLbi">
+	<h4>Choose your departing city</h4>
+	<select name="city" id="city" class="city form-control">
+		<option selected="true">Choose from list</option>
+		{{#each this}}
+			<option value="{{@index}}">{{name}}</option>
+		{{/each}}
+	</select>
+</div>

@@ -1,0 +1,15 @@
+{
+  "name": "dlbiparty",
+  "version": "0.0.0",
+  "authors": [
+    "Hektor Wallin <hektorw@gmail.com>"
+  ],
+  "dependencies": {
+    "requirejs": "~2.1.8",
+    "requirejs-text": "~2.0.10",
+    "handlebars": "~3.0.3",
+    "crossroads": "~0.12.2",
+    "signals": "~1.0.0",
+    "hasher": "~1.2.0"
+  }
+}

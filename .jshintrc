@@ -1,0 +1,14 @@
+{
+  "browser": true,
+  "undef": true,
+  "unused": true,
+  "indent": 2,
+  "globals": {
+    "console": true,
+    "require": true,
+    "define": true,
+    "$": true,
+    "performance": true,
+    "requestAnimationFrame": true
+  }
+}

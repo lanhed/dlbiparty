@@ -1,0 +1,506 @@
+{
+	"cities": [
+		{
+			"name":"Copenhagen"
+		},{
+			"name":"Gothenborg"
+		},{
+			"name":"Malmö"
+		},{
+			"name":"Stockholm"
+		},{
+			"name":"Trondheim"
+		}
+	],
+	"travelPlans":[{
+		"pre":[{
+			"type":"travel",
+			"lifespan": {
+				"from":"2015-08-21T09:00",
+				"to":"2015-08-21T10:00"
+			},
+			"info": {
+				"type":"bus",
+				"depart": {
+					"date":"2015-08-21",
+					"time":"09.00",
+					"location":"Copenhagen Airport",
+					"terminal":"",
+					"gate":""
+				},
+				"arrive":{
+					"date":"2015-08-21",
+					"time":"10.00",
+					"location":"Scandic Hotel Malmö City",
+					"terminal":"",
+					"gate":""
+				}
+			}
+		},{
+			"type":"hotel",
+			"lifespan": {
+				"from":"2015-08-21T10:00",
+				"to":"2015-08-21T11:30"
+			},
+			"info": {
+				"details":{
+					"title":"dummy title",
+					"description":"",
+					"image":"",
+					"map":{
+						"lat":-34.397,
+						"lng":150.644,
+						"zoom":8
+					}
+				},
+				"type":"hotel",
+				"card": {
+					"title":"Check in",
+					"date":"2015-08-21",
+					"time":"10.00",
+					"location":"Scandic Hotel Malmö City"
+				}
+			}
+		},{
+			"type":"travel",
+			"lifespan": {
+				"from":"2015-08-21T11:30",
+				"to":"2015-08-21T12:00"
+			},
+			"info": {
+				"type":"bus",
+				"depart": {
+					"date":"2015-08-21",
+					"time":"11.30",
+					"location":"Scandic Hotel Malmö City",
+					"terminal":"",
+					"gate":""
+				},
+				"arrive":{
+					"date":"2015-08-21",
+					"time":"12.00",
+					"location":"Alnarp",
+					"terminal":"",
+					"gate":""
+				}
+			}
+		}],
+		"post":[{
+			"type":"hotel",
+			"lifespan": {
+				"from":"2015-08-22T12:00",
+				"to":"2015-08-22T12:30"
+			},
+			"info": {
+				"type":"hotel",
+				"card": {
+					"title":"Check out",
+					"date":"2015-08-22",
+					"time":"12.00",
+					"location":"Scandic Hotel Malmö City"
+				}
+			}
+		}]
+	},{
+		"pre":[{
+			"type":"travel",
+			"lifespan": {
+				"from":"2015-08-21T07:00",
+				"to":"2015-08-21T10:00"
+			},
+			"info": {
+				"type":"bus",
+				"depart": {
+					"date":"2015-08-21",
+					"time":"07.00",
+					"location":"Gothenborg Centralstation",
+					"terminal":"",
+					"gate":""
+				},
+				"arrive":{
+					"date":"2015-08-21",
+					"time":"10.00",
+					"location":"Scandic Hotel Malmö City",
+					"terminal":"",
+					"gate":""
+				}
+			}
+		},{
+			"type":"hotel",
+			"lifespan": {
+				"from":"2015-08-21T10:00",
+				"to":"2015-08-21T11:30"
+			},
+			"info": {
+				"type":"hotel",
+				"card": {
+					"title":"Check in",
+					"date":"2015-08-21",
+					"time":"10.00",
+					"location":"Scandic Hotel Malmö City"
+				}
+			}
+		},{
+			"type":"travel",
+			"lifespan": {
+				"from":"2015-08-21T11:30",
+				"to":"2015-08-21T12:00"
+			},
+			"info": {
+				"type":"bus",
+				"depart": {
+					"date":"2015-08-21",
+					"time":"11.30",
+					"location":"Scandic Hotel Malmö City",
+					"terminal":"",
+					"gate":""
+				},
+				"arrive":{
+					"date":"2015-08-21",
+					"time":"12.00",
+					"location":"Alnarp",
+					"terminal":"",
+					"gate":""
+				}
+			}
+		}],
+		"post":[{
+			"type":"hotel",
+			"lifespan": {
+				"from":"2015-08-22T12:00",
+				"to":"2015-08-22T12:30"
+			},
+			"info": {
+				"type":"hotel",
+				"card": {
+					"title":"Check out",
+					"date":"2015-08-22",
+					"time":"12.00",
+					"location":"Scandic Hotel Malmö City"
+				}
+			}
+		}]
+	},{
+		"pre":[{
+			"type":"travel",
+			"lifespan": {
+				"from":"2015-08-21T11:30",
+				"to":"2015-08-21T12:00"
+			},
+			"info": {
+				"type":"bus",
+				"depart": {
+					"date":"2015-08-21",
+					"time":"11.30",
+					"location":"Scandic Hotel Malmö City",
+					"terminal":"",
+					"gate":""
+				},
+				"arrive":{
+					"date":"2015-08-21",
+					"time":"12.00",
+					"location":"Alnarp",
+					"terminal":"",
+					"gate":""
+				}
+			}
+		}],
+		"post":[{
+			"type":"hotel",
+			"lifespan": {
+				"from":"2015-08-22T12:00",
+				"to":"2015-08-22T12:30"
+			},
+			"info": {
+				"type":"hotel",
+				"card": {
+					"title":"Check out",
+					"date":"2015-08-22",
+					"time":"12.00",
+					"location":"Scandic Hotel Malmö City"
+				}
+			}
+		}]
+	},{
+		"pre":[{
+			"type":"travel",
+			"lifespan": {
+				"from":"2015-08-21T07:00",
+				"to":"2015-08-21T10:00"
+			},
+			"info": {
+				"type":"flight",
+				"confirmationno":"1XCFRGE3",
+				"airline":"SAS",
+				"flightno":"SK403",
+				"seat":"",
+				"depart": {
+					"date":"2015-08-21",
+					"time":"07.00",
+					"location":"Arlanda Airport",
+					"terminal":"",
+					"gate":""
+				},
+				"arrive":{
+					"date":"2015-08-21",
+					"time":"10.00",
+					"location":"Malmö Airport",
+					"terminal":"",
+					"gate":""
+				}
+			}
+		},{
+			"type":"travel",
+			"lifespan": {
+				"from":"2015-08-21T10:30",
+				"to":"2015-08-21T11:00"
+			},
+			"info": {
+				"type":"bus",
+				"depart": {
+					"date":"2015-08-21",
+					"time":"10.30",
+					"location":"Malmö Airport",
+					"terminal":"",
+					"gate":""
+				},
+				"arrive":{
+					"date":"2015-08-21",
+					"time":"11.00",
+					"location":"Scandic Hotel Malmö City",
+					"terminal":"",
+					"gate":""
+				}
+			}
+		},{
+			"type":"hotel",
+			"lifespan": {
+				"from":"2015-08-21T11:00",
+				"to":"2015-08-21T11:30"
+			},
+			"info": {
+				"type":"hotel",
+				"card": {
+					"title":"Check in",
+					"date":"2015-08-21",
+					"time":"11.00",
+					"location":"Scandic Hotel Malmö City"
+				}
+			}
+		},{
+			"type":"travel",
+			"lifespan": {
+				"from":"2015-08-21T11:30",
+				"to":"2015-08-21T12:00"
+			},
+			"info": {
+				"type":"bus",
+				"depart": {
+					"date":"2015-08-21",
+					"time":"11.30",
+					"location":"Scandic Hotel Malmö City",
+					"terminal":"",
+					"gate":""
+				},
+				"arrive":{
+					"date":"2015-08-21",
+					"time":"12.00",
+					"location":"Alnarp",
+					"terminal":"",
+					"gate":""
+				}
+			}
+		}],
+		"post":[{
+			"type":"hotel",
+			"lifespan": {
+				"from":"2015-08-22T12:00",
+				"to":"2015-08-22T12:30"
+			},
+			"info": {
+				"type":"hotel",
+				"card": {
+					"title":"Check out",
+					"date":"2015-08-22",
+					"time":"12.00",
+					"location":"Scandic Hotel Malmö City"
+				}
+			}
+		}]
+	},{
+		"pre":[{
+			"type":"travel",
+			"lifespan": {
+				"from":"2015-08-21T08:30",
+				"to":"2015-08-21T10:00"
+			},
+			"info": {
+				"type":"flight",
+				"confirmationno":"1XCFRGE3",
+				"airline":"SAS",
+				"flightno":"SK403",
+				"seat":"",
+				"depart": {
+					"date":"2015-08-21",
+					"time":"08.30",
+					"location":"Avinor, Trondheim Airport",
+					"terminal":"",
+					"gate":""
+				},
+				"arrive":{
+					"date":"2015-08-21",
+					"time":"10.00",
+					"location":"Sturup, Malmö Airport",
+					"terminal":"",
+					"gate":""
+				}
+			}
+		},{
+			"type":"travel",
+			"lifespan": {
+				"from":"2015-08-21T10:00",
+				"to":"2015-08-21T10:30"
+			},
+			"info": {
+				"type":"bus",
+				"depart": {
+					"date":"2015-08-21",
+					"time":"10.30",
+					"location":"Sturup, Malmö Airport",
+					"terminal":"",
+					"gate":""
+				},
+				"arrive":{
+					"date":"2015-08-21",
+					"time":"11.00",
+					"location":"Scandic Hotel Malmö City",
+					"terminal":"",
+					"gate":""
+				}
+			}
+		},{
+			"type":"hotel",
+			"lifespan": {
+				"from":"2015-08-21T11:00",
+				"to":"2015-08-21T11:30"
+			},
+			"info": {
+				"details":{
+					"title":"dummy title",
+					"description":"dummy description",
+					"image":"../images/dummy-map.jpg",
+					"map":{
+						"lat":-34.397,
+						"lng":150.644,
+						"zoom":8
+					}
+				},
+				"type":"hotel",
+				"card": {
+					"title":"Check in",
+					"date":"2015-08-21",
+					"time":"11.00",
+					"location":"Scandic Hotel Malmö City"
+				}
+			}
+		},{
+			"type":"travel",
+			"lifespan": {
+				"from":"2015-08-21T11:30",
+				"to":"2015-08-21T12:00"
+			},
+			"info": {
+				"type":"bus",
+				"depart": {
+					"date":"2015-08-21",
+					"time":"11.30",
+					"location":"Scandic Hotel Malmö City",
+					"terminal":"",
+					"gate":""
+				},
+				"arrive":{
+					"date":"2015-08-21",
+					"time":"12.00",
+					"location":"Alnarp",
+					"terminal":"",
+					"gate":""
+				}
+			}
+		}],
+		"post":[{
+			"type":"hotel",
+			"lifespan": {
+				"from":"2015-08-22T12:00",
+				"to":"2015-08-22T12:30"
+			},
+			"info": {
+				"type":"hotel",
+				"card": {
+					"title":"Check out",
+					"date":"2015-08-22",
+					"time":"12.00",
+					"location":"Scandic Hotel Malmö City"
+				}
+			}
+		}]
+	}],
+	"agenda":[{
+		"type":"travel",
+		"lifespan": {
+			"from":"2015-08-22T00:00",
+			"to":"2015-08-22T01:00"
+		},
+		"info": {
+			"type":"bus",
+			"depart": {
+				"date":"2015-08-22",
+				"time":"00.00",
+				"location":"Alnarp"
+			},
+			"arrive":{
+				"date":"2015-08-22",
+				"time":"01.00",
+				"location":"Scandic Hotel Malmö City"
+			}
+		}
+	},{
+		"type":"travel",
+		"lifespan": {
+			"from":"2015-08-22T01:00",
+			"to":"2015-08-22T02:00"
+		},
+		"info": {
+			"type":"bus",
+			"depart": {
+				"date":"2015-08-22",
+				"time":"01.00",
+				"location":"Alnarp"
+			},
+			"arrive":{
+				"date":"2015-08-22",
+				"time":"02.00",
+				"location":"Scandic Hotel Malmö City"
+			}
+		}
+	},{
+		"type":"travel",
+		"lifespan": {
+			"from":"2015-08-22T02:00",
+			"to":"2015-08-22T03:00"
+		},
+		"info": {
+			"type":"bus",
+			"depart": {
+				"date":"2015-08-22",
+				"time":"02.00",
+				"location":"Alnarp"
+			},
+			"arrive":{
+				"date":"2015-08-22",
+				"time":"03.00",
+				"location":"Scandic Hotel Malmö City"
+			}
+		}
+	}]
+}
+

@@ -1,0 +1,171 @@
+body {
+  background: white;
+  padding-top: 57px;
+  padding-bottom: 40px;
+  color:#272727;
+  font-family: Helvetica, Arial, '_sans';
+}
+
+.desktop {
+	padding: 30px;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background:url('../images/oopsie.jpg') no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	color: #fff;
+
+	img {
+		width: 200px;
+	}
+}
+
+.navbar {
+	.col {
+
+		.col-content-wrapper {
+			padding: 10px;
+    		display: block;
+			padding-top: 12px;
+
+			&.page-title {
+				text-align:center;
+				font-size:20px;
+				padding-top: 14px;
+			}
+
+			.glyphicon-chevron-left {
+				padding-top:7px;
+				display:none;
+
+				&.active {
+					display: inline-block;
+				}
+			}
+
+
+		}
+	}
+}
+
+body .start {
+	width: 90%;
+    margin: 0 auto;
+
+	h1, h4 {
+		text-align:center;
+	}
+	img {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+
+		&.logo {
+			padding-bottom:20px;
+		}
+	}
+	.city {
+		padding-top:30px;
+	}
+}
+
+ul.card-wrapper {
+	list-style: none;
+	padding-left: 0;
+	
+	li {
+		margin:8px;
+
+		.card {
+			padding:20px;
+			font-size: 20px;
+			background: #f7989c;
+			
+			/*
+			orange: #F2663B
+			ljusblå: #F2663B
+			gul: #F2663B
+			grön: #F2663B
+			*/
+
+			.icon {
+				display: inline-block;
+				width:20px;
+				height:20px;
+			}
+
+			.icon-location {
+				background: url(../images/map-marker-14-64x64.png) no-repeat;
+				background-size: cover;
+			}
+
+			&.active {
+				color:#fff;
+				/* http://colorzilla.com/gradient-editor/#ed1c27+0,f1525a+100 */
+				background: #ed1c27; 
+				background: -moz-linear-gradient(top,  #ed1c27 0%, #f1525a 100%); /* FF3.6+ */
+				background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ed1c27), color-stop(100%,#f1525a)); /* Chrome,Safari4+ */
+				background: -webkit-linear-gradient(top,  #ed1c27 0%,#f1525a 100%); /* Chrome10+,Safari5.1+ */
+				background: -o-linear-gradient(top,  #ed1c27 0%,#f1525a 100%); /* Opera 11.10+ */
+				background: -ms-linear-gradient(top,  #ed1c27 0%,#f1525a 100%); /* IE10+ */
+				background: linear-gradient(to bottom,  #ed1c27 0%,#f1525a 100%); /* W3C */
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ed1c27', endColorstr='#f1525a',GradientType=0 ); /* IE6-9 */
+				
+				.icon-location {
+					background: url(../images/map-marker-14-64x64-white.png) no-repeat;
+					background-size: cover;
+				}
+			}
+			
+			.travel-type {
+				font-weight:bold;
+				font-size: 20px;
+			}
+			
+			.now {
+				font-weight:bold;
+				font-size: 26px;
+			}
+			.section:first-child {
+				padding-bottom:5px;
+			}
+			.section {
+				&.departure,&.arrival {
+					padding-top:10px;
+
+					.section-header {
+						font-weight:bold;
+					}
+
+					.details {
+						text-decoration:underline;
+					}
+				}
+			}
+		}
+	}
+}
+.card-details {
+	padding: 0 10px;
+	.header {
+
+	}
+	.description {
+
+	}
+	.content {
+		img.map {
+			display: block;
+			width: 100%;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+}
+
+
+
