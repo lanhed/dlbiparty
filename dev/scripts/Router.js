@@ -166,6 +166,10 @@ define([
 	};
 	
 	Router.prototype.routeToCurrentList = function() {
+		if (Hasher.getHash() === 'instagram') {
+			return;
+		}
+
 		if (DataService().getDepartingCity()) {
 			var now = new Date('2015-08-21T07:14').getTime(); //Date.now().getTime();
 			var partyTime = new Date('2015-08-21T13:00').getTime();

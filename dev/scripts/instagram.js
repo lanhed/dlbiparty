@@ -32,6 +32,8 @@ define([
 
 			this.render();
 			this.initInstafeed();
+
+			window.instagram = this;
 		},
 		destroy: function() {},
 
@@ -43,9 +45,16 @@ define([
 			};
 
 			this.$elem.html(compiled(data));
+
+			this.bindEvents();
+		},
+
+		bindEvents: function() {
+			this.$elem.find('.show-more').click($.proxy(this.onMoreClickHandler, this));
 		},
 
 		initInstafeed: function() {
+
 			this.feed = new Instafeed({
 				clientId: this.CLIENT_ID,
 				target: this.TARGET_ID,
@@ -53,10 +62,22 @@ define([
 				tagName: this.HASHTAG,
 				get: 'tagged',
 
-				limit: 60
+				limit: 60,
+
+				after: $.proxy(this.onFetchSuccess, this)
 			});
 
 			this.feed.run();
+		},
+
+		onFetchSuccess: function() {
+			this.$elem.find('[data-fixed-loader]').hide();
+			this.$elem.find('.show-more').removeClass('loading').toggleClass('visible', this.feed.hasNext());
+		},
+
+		onMoreClickHandler: function() {
+			this.$elem.find('.show-more').addClass('loading');
+			this.feed.next();
 		}
 	};
 });
