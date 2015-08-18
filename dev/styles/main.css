@@ -5,7 +5,6 @@ body {
   color: #272727;
   font-family: Helvetica, Arial, '_sans';
 }
-
 .desktop {
   padding: 30px;
   position: absolute;
@@ -14,68 +13,57 @@ body {
   height: 100%;
   background: url('../images/oopsie.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
   color: #fff;
 }
-
 .desktop img {
   width: 200px;
 }
-
 .navbar .col .col-content-wrapper {
   padding: 10px;
   display: block;
   padding-top: 12px;
 }
-
 .navbar .col .col-content-wrapper.page-title {
   text-align: center;
   font-size: 20px;
   padding-top: 14px;
 }
-
 .navbar .col .col-content-wrapper .glyphicon-chevron-left {
   padding-top: 7px;
   display: none;
 }
-
 .navbar .col .col-content-wrapper .glyphicon-chevron-left.active {
   display: inline-block;
 }
-
 body .start {
   width: 90%;
   margin: 0 auto;
 }
-
 body .start h1,
 body .start h4 {
   text-align: center;
 }
-
 body .start img {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
-
 body .start img.logo {
   padding-bottom: 20px;
 }
-
 body .start .city {
   padding-top: 30px;
 }
-
 ul.card-wrapper {
   list-style: none;
   padding-left: 0;
 }
-
 ul.card-wrapper li {
   margin: 8px;
 }
-
 ul.card-wrapper li .card {
   padding: 20px;
   font-size: 20px;
@@ -87,76 +75,64 @@ ul.card-wrapper li .card {
 			grön: #F2663B
 			*/
 }
-
 ul.card-wrapper li .card .icon {
   display: inline-block;
   width: 20px;
   height: 20px;
 }
-
 ul.card-wrapper li .card .icon-location {
   background: url(../images/map-marker-14-64x64.png) no-repeat;
-  -webkit-background-size: cover;
   background-size: cover;
 }
-
 ul.card-wrapper li .card.active {
   color: #fff;
   /* http://colorzilla.com/gradient-editor/#ed1c27+0,f1525a+100 */
   background: #ed1c27;
+  background: -moz-linear-gradient(top, #ed1c27 0%, #f1525a 100%);
   /* FF3.6+ */
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ed1c27), color-stop(100%, #f1525a));
   /* Chrome,Safari4+ */
   background: -webkit-linear-gradient(top, #ed1c27 0%, #f1525a 100%);
   /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #ed1c27 0%, #f1525a 100%);
   /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #ed1c27 0%, #f1525a 100%);
   /* IE10+ */
-  background: -webkit-gradient(linear, left top, left bottom, from(#ed1c27), to(#f1525a));
   background: linear-gradient(to bottom, #ed1c27 0%, #f1525a 100%);
   /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ed1c27', endColorstr='#f1525a', GradientType=0);
   /* IE6-9 */
 }
-
 ul.card-wrapper li .card.active .icon-location {
   background: url(../images/map-marker-14-64x64-white.png) no-repeat;
-  -webkit-background-size: cover;
   background-size: cover;
 }
-
 ul.card-wrapper li .card .travel-type {
   font-weight: bold;
   font-size: 20px;
 }
-
 ul.card-wrapper li .card .now {
   font-weight: bold;
   font-size: 26px;
 }
-
 ul.card-wrapper li .card .section:first-child {
   padding-bottom: 5px;
 }
-
 ul.card-wrapper li .card .section.departure,
 ul.card-wrapper li .card .section.arrival {
   padding-top: 10px;
 }
-
 ul.card-wrapper li .card .section.departure .section-header,
 ul.card-wrapper li .card .section.arrival .section-header {
   font-weight: bold;
 }
-
 ul.card-wrapper li .card .section.departure .details,
 ul.card-wrapper li .card .section.arrival .details {
   text-decoration: underline;
 }
-
 .card-details {
   padding: 0 10px;
 }
-
 .card-details .content img.map {
   display: block;
   width: 100%;
