@@ -76,6 +76,23 @@ ul.card-wrapper li {
   margin: 8px;
 }
 
+ul.card-wrapper li.no-data {
+  text-align: center;
+  display: block;
+  bottom: 0;
+  position: absolute;
+  top: 0px;
+  margin: auto 0;
+  padding: 95% 20px 20px;
+  background: url('../images/DLBi-icon.png') no-repeat 50% 29%;
+  font-size: 1.6em;
+  color: #000;
+}
+
+ul.card-wrapper li.no-data.hide {
+  display: none;
+}
+
 ul.card-wrapper li .card {
   padding: 20px;
   font-size: 20px;
@@ -122,6 +139,11 @@ ul.card-wrapper li .card.active .icon-location {
   background: url(../images/map-marker-14-64x64-white.png) no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
+}
+
+ul.card-wrapper li .card .description {
+  font-size: 16px;
+  font-style: italic;
 }
 
 ul.card-wrapper li .card .travel-type {

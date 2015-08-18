@@ -80,6 +80,23 @@ ul.card-wrapper {
 	li {
 		margin:8px;
 
+		&.no-data {
+			text-align: center;
+			display: block;
+			bottom: 0;
+			position: absolute;
+			top: 0px;
+			margin: auto 0;
+			padding: 95% 20px 20px;
+			background: url('../images/DLBi-icon.png') no-repeat 50% 29%;
+			font-size: 1.6em;
+			color: #000;
+
+			&.hide {
+				display: none;
+			}
+		}
+
 		.card {
 			padding:20px;
 			font-size: 20px;
@@ -119,6 +136,10 @@ ul.card-wrapper {
 					background: url(../images/map-marker-14-64x64-white.png) no-repeat;
 					background-size: cover;
 				}
+			}
+			.description {
+				font-size: 16px;
+				font-style: italic;
 			}
 			
 			.travel-type {

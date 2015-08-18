@@ -3,20 +3,26 @@ define([
 	'handlebars',
 	'hasher',
 	'cardInfo',
+	'CardManager',
 	'text!templates/cardTravel.hbs',
+	'text!templates/cardCheckin.hbs',
 	'text!templates/cardHotel.hbs',
-	'text!templates/cardEvent.hbs',],
+	'text!templates/cardEvent.hbs'],
 function(
 	$,
 	Handlebars,
 	Hasher,
 	cardInfo,
+	CardManager,
 	cardTravelTemplate,
+	cardCheckinTemplate,
 	hotelTemplate,
 	eventTemplate
 ){
-	function Card(elem) {
+	function Card(elem,lifespanData) {
 		this.elem = elem;
+		this.lifespanData = lifespanData;
+		this.interval = null;
 	}
 
 	Card.prototype.render = function(data) {
@@ -26,19 +32,26 @@ function(
 		this.id = d.id;
 		this.elem.attr('id', this.id);
 		
+		var compileCard = null;
 		if (d.type === 'travel') {
-			var compileTravelCard = Handlebars.compile(cardTravelTemplate);
-			html = compileTravelCard(d);
+			compileCard = Handlebars.compile(cardTravelTemplate);
+		} else if (d.type === 'checkin') {
+			compileCard = Handlebars.compile(cardCheckinTemplate);
 		} else if (d.type === 'hotel') {
-			var compileHotelCard = Handlebars.compile(hotelTemplate);
-			html = compileHotelCard(d);
+			compileCard = Handlebars.compile(hotelTemplate);
 		} else if (d.type === 'event') {
-			var compileHotelCard = Handlebars.compile(eventTemplate);
-			html = compileHotelCard(d);
+			compileCard = Handlebars.compile(eventTemplate);
 		}
+		html = compileCard(d);
 
 		this.elem.html(html);
 		this.bindEvents(d);
+	};
+
+	Card.prototype.activateCard = function() {
+		var $cardElem = this.elem.find('.card');
+		$cardElem.addClass('active');
+		$cardElem.prepend('<div class="now">Next up:</div>');
 	};
 
 	Card.prototype.destroy = function() {
@@ -50,13 +63,27 @@ function(
 		if (data.info.details) {
 			this.elem.find('.details').on('click', $.proxy(this.detailsClickHandler,this));
 		}
+
+		this.interval = window.setInterval($.proxy(this.onIntervalChange,this), 1000*60);
 	};
 
 	Card.prototype.unbindEvents = function() {
-		if (data.info.details) {
-			this.elem.find('.details').off('click', $.proxy(this.detailsClickHandler,this));
-		}
+		clearInterval(this.interval);
+		this.elem.find('.details').off('click', $.proxy(this.detailsClickHandler,this));
 		this.elem.remove();
+	};
+
+	Card.prototype.onIntervalChange = function() {
+		var now = new Date();
+		var time = now.getTime();
+		//console.log('checking interval for card', this.id);
+
+		if (this.lifespanData.fromTime <= time && this.lifespanData.toTime <= time) {
+			console.log('remove card', this.id);
+			clearInterval(this.interval);
+			var e = new CustomEvent('remove-card', {'detail': { 'cardId': this.id }});
+			window.dispatchEvent(e);
+		}
 	};
 
 	Card.prototype.detailsClickHandler = function(event) {

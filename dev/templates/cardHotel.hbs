@@ -1,8 +1,9 @@
 <div class="card  {{type}} {{#if active}}active{{/if}}">
 	{{#if active}}<div class="now">Next up:</div>{{/if}}
-	<div class="travel-type">Hotel: {{info/card/title}}</div>
+	<div class="travel-type">Hotel: {{info/card/title}} {{info/card/id}}</div>
 	<div class="section departure">
 		<div><i class="glyphicon glyphicon-time"></i> {{info/card/time}}</div>
 		<div>{{#if info/details }} <span class="details"> {{/if}}<span class="icon icon-location"></span> {{info/card/location}}{{#if info/details }} </span> {{/if}}</div>
+		{{#if info/card/description }} <div class="description">{{info/card/description}}</div> {{/if}}
 	</div>
 </div>

@@ -18,6 +18,7 @@ function(
 		this.cardTypeIndex = null;
 		this.dataLoaded = false;
 		this.cardCount = 0;
+		this.setings = null;
 
 		return true;
 	};
@@ -28,12 +29,10 @@ function(
 
 		if (!localStorage.data) {
 
-			//console.log('data is not loaded in localStorage');
-			// show loading symbol
-
-			$.getJSON('data/data2.json', function(data) {
+			$.getJSON('data/data.json', function(data) {
 				that.data = data;
-				
+				console.log('data',data);
+				that.settings = data.settings;
 				var stringifiedData = JSON.stringify(that.data);
 				try {
 					localStorage.data = stringifiedData;
@@ -47,8 +46,9 @@ function(
 			});
 
 		} else {
-			//console.log('data is loaded in localStorage');
 			this.data = JSON.parse(localStorage.data);
+
+			this.settings = this.data.settings;
 
 			this.indexCards(this.data);
 
@@ -57,6 +57,15 @@ function(
 
 		//console.log('departingCity',this.getDepartingCity());
 		return promise;
+	};
+
+	DataService.prototype.getPartyDate = function() {
+		return this.settings.partyDate;
+	};
+
+
+	DataService.prototype.getPostPartyDate = function() {
+		return this.settings.postPartyDate;
 	};
 
 	DataService.prototype.indexCards = function() {

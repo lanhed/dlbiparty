@@ -4,6 +4,10 @@
 			"name":"Copenhagen"
 		}
 	],
+	"settings":{
+		"partyDate":"2015-08-18T23:53",
+		"postPartyDate":"2015-08-19T07:00"
+	},
 	"travelPlans":[{
 		"pre":[
 
@@ -16,48 +20,40 @@
 
 
 		{
-			"type":"travel",
+			"type":"hotel",
 			"lifespan": {
-				"from":"2015-08-18T20:20",
-				"to":"2015-08-18T20:21"
+				"from":"2015-08-18T23:51",
+				"to":"2015-08-18T23:52"
 			},
 			"info": {
-				"type":"bus",
-				"depart": {
+				"type":"hotel",
+				"card": {
+					"title":"Check in",
 					"date":"2015-08-21",
-					"time":"20:05",
+					"time":"21:50",
 					"location":"Copenhagen (Vermundsgade 40)"
-				},
-				"arrive":{
-					"date":"2015-08-21",
-					"time":"20:06",
-					"location":"Alnarp"
 				}
 			}
 		},{
-			"type":"travel",
+			"type":"hotel",
 			"lifespan": {
-				"from":"2015-08-18T20:21",
-				"to":"2015-08-18T20:22"
+				"from":"2015-08-18T23:52",
+				"to":"2015-08-18T23:53"
 			},
 			"info": {
-				"type":"bus",
-				"depart": {
+				"type":"check in",
+				"card": {
+					"title":"Check in",
 					"date":"2015-08-21",
-					"time":"20:06",
+					"time":"21:50",
 					"location":"Copenhagen (Vermundsgade 40)"
-				},
-				"arrive":{
-					"date":"2015-08-21",
-					"time":"20:07",
-					"location":"Alnarp"
 				}
 			}
 		}],
 		"post":[{
 			"type":"travel",
 			"lifespan": {
-				"from":"2015-08-22T01:45",
+				"from":"2015-08-18T23:55",
 				"to":"2015-08-22T02:30"
 			},
 			"info": {

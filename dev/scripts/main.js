@@ -49,14 +49,20 @@ function(
 			forceDataReload: function() {
 				DataService().clearData();
 				DataService().clearOfflineData();
+
+				$('body').find('[data-fixed-loader]').show();
 				load();
 			}
 		}
 	}
 
+	window.dev = this.dev = {};
+
 	function initApp() {
 		// startup cardManager
-		var cardManager = CardManager();
+		var cardManager = this.dev.cardManager = CardManager();
+		var dataService = this.dev.dataService = DataService();
+		var router = this.dev.router = Router();
 
 		// startup router & set starting point
 		Router().routeToCurrentList();
@@ -67,6 +73,7 @@ function(
 
 		promise.done(function(data) {
 			initApp();
+			$('body').find('[data-fixed-loader]').hide();
 		});
 		promise.fail(function(err){
 			console.log(err);

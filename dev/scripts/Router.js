@@ -78,7 +78,7 @@ define([
 		this.bindEvents();
 
 		//log all routes
-		Crossroads.routed.add(console.log, console);
+		//Crossroads.routed.add(console.log, console);
 
 		//parse initial hash
 		Hasher.initialized.add($.proxy(this.parseHash,this));
@@ -90,6 +90,7 @@ define([
 
 	Router.prototype.bindEvents = function() {
 		window.addEventListener('history_back', $.proxy(this.routeToPrevHash,this));
+		window.addEventListener('current_list', $.proxy(this.routeToCurrentList,this));
 	};
 
 	Router.prototype.parseHash = function(newHash, oldHash) {
@@ -99,8 +100,10 @@ define([
 
 			if (oldHash === 'pre' || oldHash ==='post' || oldHash === 'during') {
 				agenda.destroy();
+			} else if (oldHash === 'instagram') {
+				instagram.destroy();
 			} else { // details
-				//details.destroy();
+				cardDetails.destroy();
 			}
 		}
 
@@ -119,19 +122,21 @@ define([
 	};
 	
 	Router.prototype.routeToReset = function() {
-		DataService().clearData();
-		DataService().clearOfflineData();
-		navbar.destroy();
-
 		// what page is displaying?
 		var hash = Hasher.getHash();
 		if (hash === 'pre' || hash ==='post' || hash === 'during') {
 			agenda.destroy();
+		} else if (hash === 'instagram') {
+			instagram.destroy();
 		} else if (hash === 'reset') {
 		} else {
-			console.log('reset hash',hash);
-			details.destroy();
+			cardDetails.destroy();
 		}
+
+		DataService().clearData();
+		DataService().clearOfflineData();
+		navbar.destroy();
+		CardManager().removeAllCards();
 
 		// force data reload
 		window.app().forceDataReload();
@@ -170,23 +175,32 @@ define([
 			return;
 		}
 
+		Hasher.setHash(this.getCurrentViewInTime());
+	};
+
+	Router.prototype.getCurrentViewInTime = function() {
 		if (DataService().getDepartingCity()) {
-			var now = Date.now(); //new Date('2015-08-21T07:14').getTime(); 
-			var partyDate = '2015-08-21T13:00',
-				postPartyDate = '2015-08-22T07:00';
+			var nowDate = new Date();
+			var timezone = nowDate.getTimezoneOffset()/60;
+			var now = nowDate.getTime();
+			var partyTime = new Date(DataService().getPartyDate()),
+				postTime = new Date(DataService().getPostPartyDate());
 
-			var partyTime = new Date(partyDate).getTime(),
-				postTime = new Date(postPartyDate).getTime();
+			partyTime.setHours(partyTime.getHours() + timezone);
+			postTime.setHours(postTime.getHours() + timezone);
 
-			if (now < partyTime) {
-				Hasher.setHash('pre');
-			} else if (now >= partyTime && now < postTime) {
-				Hasher.setHash('during');
+			var partyDate = partyTime.getTime();
+			var postDate = postTime.getTime();
+
+			if (now < partyDate) {
+				return 'pre';
+			} else if (now >= partyDate && now < postDate) {
+				return 'during';
 			} else {
-				Hasher.setHash('post');
+				return 'post';
 			}
 		} else {
-			Hasher.setHash('home');
+			return 'home';
 		}
 	};
 

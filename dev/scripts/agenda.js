@@ -34,7 +34,7 @@ function(
 			this.createCards();
 		},
 		destroy:function() {
-
+			
 		},
 		createCards: function(){
 			var cardData = null,
@@ -46,6 +46,7 @@ function(
 			var foundActiveCard = false;
 
 			var dateData = {};
+			var deleteData = [];
 
 			for (var i = 0; i < this.data.length; i++) {
 				d = this.data[i];
@@ -69,10 +70,18 @@ function(
 				} else if (dateFromTime <= nowTime && dateToTime <= nowTime) {
 					// remove data as well?!
 					d.removed = true;
+					deleteData.push(i);
 				}
 			}
 
-			if (!foundActiveCard) {
+			if (deleteData.length > 0) {
+				for (var i = deleteData.length - 1; i >= 0; i--) {
+					var key = deleteData[i];
+					var deleted = this.data.splice(key);
+				};
+			}
+
+			if (!foundActiveCard && this.data[0]) {
 				this.data[0].active = true;
 			}
 
@@ -81,6 +90,12 @@ function(
 		renderCard: function(data) {
 			var cardData = null,
 				card = null;
+
+			if (data.length > 0) {
+				this.elem.find('li.no-data').addClass('hide');
+			} else {
+				this.elem.find('li.no-data').removeClass('hide');
+			}
 
 			for (var i = 0; i < data.length; i++) {
 				cardData = data[i];
