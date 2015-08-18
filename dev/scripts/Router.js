@@ -171,9 +171,13 @@ define([
 		}
 
 		if (DataService().getDepartingCity()) {
-			var now = new Date('2015-08-21T07:14').getTime(); //Date.now().getTime();
-			var partyTime = new Date('2015-08-21T13:00').getTime();
-			var postTime = new Date('2015-08-22T07:00').getTime();
+			var now = Date.now(); //new Date('2015-08-21T07:14').getTime(); 
+			var partyDate = '2015-08-21T13:00',
+				postPartyDate = '2015-08-22T07:00';
+
+			var partyTime = new Date(partyDate).getTime(),
+				postTime = new Date(postPartyDate).getTime();
+
 			if (now < partyTime) {
 				Hasher.setHash('pre');
 			} else if (now >= partyTime && now < postTime) {

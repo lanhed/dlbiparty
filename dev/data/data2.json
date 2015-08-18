@@ -1,0 +1,528 @@
+{
+	"cities": [
+		{
+			"name":"Copenhagen"
+		}
+	],
+	"travelPlans":[{
+		"pre":[
+
+
+
+
+
+
+
+
+
+		{
+			"type":"travel",
+			"lifespan": {
+				"from":"2015-08-18T20:20",
+				"to":"2015-08-18T20:21"
+			},
+			"info": {
+				"type":"bus",
+				"depart": {
+					"date":"2015-08-21",
+					"time":"20:05",
+					"location":"Copenhagen (Vermundsgade 40)"
+				},
+				"arrive":{
+					"date":"2015-08-21",
+					"time":"20:06",
+					"location":"Alnarp"
+				}
+			}
+		},{
+			"type":"travel",
+			"lifespan": {
+				"from":"2015-08-18T20:21",
+				"to":"2015-08-18T20:22"
+			},
+			"info": {
+				"type":"bus",
+				"depart": {
+					"date":"2015-08-21",
+					"time":"20:06",
+					"location":"Copenhagen (Vermundsgade 40)"
+				},
+				"arrive":{
+					"date":"2015-08-21",
+					"time":"20:07",
+					"location":"Alnarp"
+				}
+			}
+		}],
+		"post":[{
+			"type":"travel",
+			"lifespan": {
+				"from":"2015-08-22T01:45",
+				"to":"2015-08-22T02:30"
+			},
+			"info": {
+				"type":"bus",
+				"depart": {
+					"date":"2015-08-22",
+					"time":"01.45",
+					"location":"Alnarp"
+				},
+				"arrive":{
+					"date":"2015-08-22",
+					"time":"03.15",
+					"location":"Copenhagen, Vermundsgade 40 A with stop at Centralstation"
+				}
+			}
+		}]
+	}],
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	"agenda":[{
+		"type":"event",
+		"lifespan": {
+			"from":"2015-08-21T13:00",
+			"to":"2015-08-22T13:10"
+		},
+		"info": {
+			"type":"arrival",
+			"card": {
+				"time":"13.00",
+				"title":"Arrival",
+				"description":"",
+				"location":"Auditorium",
+				"details": {
+					"image":""
+				}
+			}
+		}
+	},{
+		"type":"event",
+		"lifespan": {
+			"from":"2015-08-21T13:10",
+			"to":"2015-08-21T15:00"
+		},
+		"info": {
+			"type":"dine",
+			"card": {
+				"time":"13.10",
+				"title":"Lunch",
+				"description":"Depending on the weather, we do lunch inside (Loft) or outside (Park)",
+				"location":"Loft or Park",
+				"details": {
+					"image":""
+				}
+			}
+		}
+	},{
+		"type":"event",
+		"lifespan": {
+			"from":"2015-08-21T15:00",
+			"to":"2015-08-21T15:10"
+		},
+		"info": {
+			"type":"presentation",
+			"card": {
+				"time":"15.00",
+				"title":"Start",
+				"description":"",
+				"location":"Auditorium",
+				"details": {
+					"image":""
+				}
+			}
+		}
+	},{
+		"type":"event",
+		"lifespan": {
+			"from":"2015-08-21T15:10",
+			"to":"2015-08-21T15:15"
+		},
+		"info": {
+			"type":"presentation",
+			"card": {
+				"time":"15.10",
+				"title":"Welcome",
+				"description":"",
+				"location":"Auditorium",
+				"details": {
+					"image":""
+				}
+			}
+		}
+	},{
+		"type":"event",
+		"lifespan": {
+			"from":"2015-08-21T15:15",
+			"to":"2015-08-21T15:20"
+		},
+		"info": {
+			"type":"presentation",
+			"card": {
+				"time":"15.15",
+				"title":"Film",
+				"description":"",
+				"location":"Auditorium",
+				"details": {
+					"image":""
+				}
+			}
+		}
+	},{
+		"type":"event",
+		"lifespan": {
+			"from":"2015-08-21T15:20",
+			"to":"2015-08-21T15:30"
+		},
+		"info": {
+			"type":"presentation",
+			"card": {
+				"time":"15.20",
+				"title":"Presentation",
+				"description":"",
+				"location":"Auditorium",
+				"details": {
+					"image":""
+				}
+			}
+		}
+	},{
+		"type":"event",
+		"lifespan": {
+			"from":"2015-08-21T15:30",
+			"to":"2015-08-21T15:40"
+		},
+		"info": {
+			"type":"presentation",
+			"card": {
+				"time":"15.30",
+				"title":"Presentation",
+				"description":"",
+				"location":"Auditorium",
+				"details": {
+					"image":""
+				}
+			}
+		}
+	},{
+		"type":"event",
+		"lifespan": {
+			"from":"2015-08-21T15:40",
+			"to":"2015-08-21T15:50"
+		},
+		"info": {
+			"type":"presentation",
+			"card": {
+				"time":"15.40",
+				"title":"Presentation",
+				"description":"",
+				"location":"Auditorium",
+				"details": {
+					"image":""
+				}
+			}
+		}
+	},{
+		"type":"event",
+		"lifespan": {
+			"from":"2015-08-21T15:50",
+			"to":"2015-08-21T15:55"
+		},
+		"info": {
+			"type":"presentation",
+			"card": {
+				"time":"15.50",
+				"title":"Presentation",
+				"description":"",
+				"location":"Auditorium",
+				"details": {
+					"image":""
+				}
+			}
+		}
+	},{
+		"type":"event",
+		"lifespan": {
+			"from":"2015-08-21T15:55",
+			"to":"2015-08-21T16:00"
+		},
+		"info": {
+			"type":"presentation",
+			"card": {
+				"time":"15.55",
+				"title":"Presentation",
+				"description":"",
+				"location":"Auditorium",
+				"details": {
+					"image":""
+				}
+			}
+		}
+	},{
+		"type":"event",
+		"lifespan": {
+			"from":"2015-08-21T16:00",
+			"to":"2015-08-21T16:20"
+		},
+		"info": {
+			"type":"presentation",
+			"card": {
+				"time":"16.00",
+				"title":"Presentation",
+				"description":"",
+				"location":"Auditorium",
+				"details": {
+					"image":""
+				}
+			}
+		}
+	},{
+		"type":"event",
+		"lifespan": {
+			"from":"2015-08-21T16:20",
+			"to":"2015-08-21T16:25"
+		},
+		"info": {
+			"type":"presentation",
+			"card": {
+				"time":"16.20",
+				"title":"Presentation",
+				"description":"",
+				"location":"Auditorium",
+				"details": {
+					"image":""
+				}
+			}
+		}
+	},{
+		"type":"event",
+		"lifespan": {
+			"from":"2015-08-21T16:25",
+			"to":"2015-08-21T16:35"
+		},
+		"info": {
+			"type":"presentation",
+			"card": {
+				"time":"16.25",
+				"title":"Office presentations - Intro",
+				"description":"",
+				"location":"Auditorium",
+				"details": {
+					"image":""
+				}
+			}
+		}
+	},{
+		"type":"event",
+		"lifespan": {
+			"from":"2015-08-21T16:35",
+			"to":"2015-08-21T16:50"
+		},
+		"info": {
+			"type":"presentation",
+			"card": {
+				"time":"16.35",
+				"title":"Stockholm office presentation",
+				"description":"",
+				"location":"Auditorium",
+				"details": {
+					"image":""
+				}
+			}
+		}
+	},{
+		"type":"event",
+		"lifespan": {
+			"from":"2015-08-21T16:50",
+			"to":"2015-08-21T17:05"
+		},
+		"info": {
+			"type":"presentation",
+			"card": {
+				"time":"16.50",
+				"title":"Trondheim office presentation",
+				"description":"",
+				"location":"Auditorium",
+				"details": {
+					"image":""
+				}
+			}
+		}
+	},{
+		"type":"event",
+		"lifespan": {
+			"from":"2015-08-21T17:05",
+			"to":"2015-08-21T17:20"
+		},
+		"info": {
+			"type":"presentation",
+			"card": {
+				"time":"17.05",
+				"title":"Malmö office presentation",
+				"description":"",
+				"location":"Auditorium",
+				"details": {
+					"image":""
+				}
+			}
+		}
+	},{
+		"type":"event",
+		"lifespan": {
+			"from":"2015-08-21T17:20",
+			"to":"2015-08-21T17:35"
+		},
+		"info": {
+			"type":"presentation",
+			"card": {
+				"time":"17.20",
+				"title":"Copenhagen office presentation",
+				"description":"",
+				"location":"Auditorium",
+				"details": {
+					"image":""
+				}
+			}
+		}
+	},{
+		"type":"event",
+		"lifespan": {
+			"from":"2015-08-21T17:35",
+			"to":"2015-08-21T17:50"
+		},
+		"info": {
+			"type":"presentation",
+			"card": {
+				"time":"17.35",
+				"title":"Gothenborg office presentation",
+				"description":"",
+				"location":"Auditorium",
+				"details": {
+					"image":""
+				}
+			}
+		}
+	},{
+		"type":"event",
+		"lifespan": {
+			"from":"2015-08-21T17:50",
+			"to":"2015-08-21T18:00"
+		},
+		"info": {
+			"type":"presentation",
+			"card": {
+				"time":"17.50",
+				"title":"Wrap up - Presentation Toastmaster",
+				"description":"",
+				"location":"Auditorium",
+				"details": {
+					"image":""
+				}
+			}
+		}
+	},{
+		"type":"event",
+		"lifespan": {
+			"from":"2015-08-21T19:00",
+			"to":"2015-08-21T19:30"
+		},
+		"info": {
+			"type":"dine",
+			"card": {
+				"time":"19.00",
+				"title":"Predinner drink at the barbeque",
+				"description":"",
+				"location":"Park",
+				"details": {
+					"image":""
+				}
+			}
+		}
+	},{
+		"type":"event",
+		"lifespan": {
+			"from":"2015-08-21T19:30",
+			"to":"2015-08-21T20:00"
+		},
+		"info": {
+			"type":"dine",
+			"card": {
+				"time":"19.30",
+				"title":"Dinner",
+				"description":"",
+				"location":"Loft",
+				"details": {
+					"image":""
+				}
+			}
+		}
+	},{
+		"type":"event",
+		"lifespan": {
+			"from":"2015-08-21T20:00",
+			"to":"2015-08-21T21:00"
+		},
+		"info": {
+			"type":"presentation",
+			"card": {
+				"time":"20.00",
+				"title":"Toastmaster",
+				"description":"",
+				"location":"Loft",
+				"details": {
+					"image":""
+				}
+			}
+		}
+	},{
+		"type":"event",
+		"lifespan": {
+			"from":"2015-08-21T22:00",
+			"to":"2015-08-21T24:00"
+		},
+		"info": {
+			"type":"presentation",
+			"card": {
+				"time":"22.00 (or when toastmaster decide)",
+				"title":"DJ",
+				"description":"",
+				"location":"Loft",
+				"details": {
+					"image":""
+				}
+			}
+		}
+	},{
+		"type":"event",
+		"lifespan": {
+			"from":"2015-08-22T00:00",
+			"to":"2015-08-22T01:45"
+		},
+		"info": {
+			"type":"dine",
+			"card": {
+				"time":"00.00",
+				"title":"Nattamat",
+				"description":"",
+				"location":"Loft",
+				"details": {
+					"image":""
+				}
+			}
+		}
+	}]
+}
+

@@ -40,18 +40,33 @@ function(
 			var cardData = null,
 				d = null;
 
-			var now = new Date('2015-08-21T07:14').getTime(); //Date.now().getTime();
+			var now = new Date(); //new Date('2015-08-21T07:14').getTime(); //
+			var timezone = now.getTimezoneOffset()/60;
+			var nowTime = now.getTime();
 			var foundActiveCard = false;
+
+			var dateData = {};
 
 			for (var i = 0; i < this.data.length; i++) {
 				d = this.data[i];
 
-				var dateFrom = new Date(d.lifespan.from).getTime();
-				var dateTo = new Date(d.lifespan.to).getTime();
+				var dateFrom = new Date(d.lifespan.from);
+				dateFrom.setHours(dateFrom.getHours() + timezone);
+				var dateTo = new Date(d.lifespan.to);
+				dateTo.setHours(dateTo.getHours() + timezone);
 
-				if(dateFrom <= now && dateTo >= now) {
+				dateData.from = dateFrom;
+				dateData.to = dateTo;
+
+				dateFromTime = dateFrom.getTime();
+				dateToTime = dateTo.getTime();
+
+				dateData.fromTime = dateFromTime;
+				dateData.toTime = dateToTime;
+
+				if(dateFromTime <= nowTime && dateToTime >= nowTime) {
 					d.active = foundActiveCard = true;
-				} else if (dateFrom <= now && dateTo <= now) {
+				} else if (dateFromTime <= nowTime && dateToTime <= nowTime) {
 					// remove data as well?!
 					d.removed = true;
 				}

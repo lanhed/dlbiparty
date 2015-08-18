@@ -31,7 +31,7 @@ function(
 			//console.log('data is not loaded in localStorage');
 			// show loading symbol
 
-			$.getJSON('data/data.json', function(data) {
+			$.getJSON('data/data2.json', function(data) {
 				that.data = data;
 				
 				var stringifiedData = JSON.stringify(that.data);

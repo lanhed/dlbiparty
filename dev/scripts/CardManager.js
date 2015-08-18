@@ -20,6 +20,29 @@ function(
 		var elem = $('<li></li>');
 		parent.append(elem);
 
+		var now = new Date(); //new Date('2015-08-21T07:14').getTime(); //
+		var timezone = now.getTimezoneOffset()/60;
+		var nowTime = now.getTime();
+		var dateData = {};
+
+		var dateFrom = new Date(data.lifespan.from);
+		dateFrom.setHours(dateFrom.getHours() + timezone);
+
+		var dateTo = new Date(data.lifespan.to);
+		dateTo.setHours(dateTo.getHours() + timezone);
+
+		dateData.from = dateFrom;
+		dateData.to = dateTo;
+
+		dateFromTime = dateFrom.getTime();
+		dateToTime = dateTo.getTime();
+
+		dateData.fromTime = dateFromTime;
+		dateData.toTime = dateToTime;
+
+		console.log('from',dateFrom);
+		console.log('to',dateTo);
+
 		var card = new Card(elem);
 		if (this.cardExist(data.id)) {
 			this.getCardFromId(data.id)
@@ -28,6 +51,8 @@ function(
 			this.cardCounter++;
 			this.index.push(data.id);
 		}
+
+		//this.addEventListener()
 
 		return card;
 	};

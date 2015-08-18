@@ -4,14 +4,16 @@ define([
 	'hasher',
 	'cardInfo',
 	'text!templates/cardTravel.hbs',
-	'text!templates/cardHotel.hbs'],
+	'text!templates/cardHotel.hbs',
+	'text!templates/cardEvent.hbs',],
 function(
 	$,
 	Handlebars,
 	Hasher,
 	cardInfo,
 	cardTravelTemplate,
-	hotelTemplate
+	hotelTemplate,
+	eventTemplate
 ){
 	function Card(elem) {
 		this.elem = elem;
@@ -29,6 +31,9 @@ function(
 			html = compileTravelCard(d);
 		} else if (d.type === 'hotel') {
 			var compileHotelCard = Handlebars.compile(hotelTemplate);
+			html = compileHotelCard(d);
+		} else if (d.type === 'event') {
+			var compileHotelCard = Handlebars.compile(eventTemplate);
 			html = compileHotelCard(d);
 		}
 
