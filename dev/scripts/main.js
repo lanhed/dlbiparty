@@ -5,6 +5,7 @@ require.config({
 		signals: '../bower_components/js-signals/dist/signals.min',
 		hasher: '../bower_components/hasher/dist/js/hasher.min',
 		crossroads: '../bower_components/crossroads/dist/crossroads.min',
+		instafeed: '../bower_components/instafeed.js/instafeed',
 		jquery: '../libs/jquery.min',
 		bootstrap: 'bootstrap.min',
 		templates: '../templates'
@@ -15,6 +16,9 @@ require.config({
 		},
 		hasher: {
 			deps: ['signals']
+		},
+		instafeed: {
+			exports: 'Instafeed'
 		}
 	}
 });

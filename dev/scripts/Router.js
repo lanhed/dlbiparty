@@ -10,10 +10,10 @@ define([
 	'departingSelection',
 	'agenda',
 	'desktopMsg',
+	'instagram',
 	'navbar',
-	'cardDetails'],
-
-function(
+	'cardDetails'
+], function(
 	$,
 	Signals,
 	Crossroads,
@@ -25,6 +25,7 @@ function(
 	departingSelection,
 	agenda,
 	desktopMsg,
+	instagram,
 	navbar,
 	cardDetails
 ) {
@@ -56,6 +57,9 @@ function(
 
 		var routePost = Crossroads.addRoute('post');
 		routePost.matched.add($.proxy(this.routeToPost,this));
+
+		var routeInstagram = Crossroads.addRoute('instagram');
+		routeInstagram.matched.add($.proxy(this.routeToInstagram,this));
 
 		var detailsRoute = Crossroads.addRoute('/details/{id}', function(id) {
 			Crossroads.parse('/details/'+id);
@@ -132,6 +136,11 @@ function(
 		// force data reload
 		window.app().forceDataReload();
 	};
+
+	Router.prototype.routeToInstagram = function() {
+		Crossroads.parse('instagram');
+		instagram.init($('.page-wrapper'));
+	};
 	
 	Router.prototype.routeToPre = function() {
 		Crossroads.parse('pre');
@@ -145,6 +154,7 @@ function(
 	Router.prototype.routeToPost = function() {
 		Crossroads.parse('post');
 		agenda.init($('.page-wrapper'),DataService().getCardDataFromType('post'), 'Homecoming');
+
 	};
 	Router.prototype.routeToPrevHash = function() {
 		if (this.hashHistory.length === 0) {
