@@ -67,6 +67,11 @@ function(
 		return this.settings.postPartyDate;
 	};
 
+	DataService.prototype.useIndividualData = function() {
+		
+		return (this.settings.useIndividualData === 'true');
+	};
+
 	DataService.prototype.indexCards = function() {
 		this.cards = {
 			"pre": [],

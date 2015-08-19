@@ -1,5 +1,6 @@
 {{log this}}
 <div class="info">
+	{{#if this/usr}}
 	<h4>WiFi</h4>
 	<p>Your personal login is:</p>
 	<ul>
@@ -7,6 +8,7 @@
 		<li>Username: {{this/usr}}</li>
 		<li>Password: {{this/pwd}}</li>
 	</ul>
+	{{/if}}
 	<h4>About Alnarp</h4>
 	<p>Alnarp is the campus for Swedish University of Agricultural Sciences and also a botanical garden open for the public, Alnarpsparken. In the park lies Alnarps castle, built in 1862. We will spend the day in the main building campus building and in the park.</p>
 	<h4>Practical stuff</h4>

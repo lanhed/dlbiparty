@@ -27,7 +27,8 @@
 	],
 	"settings":{
 		"partyDate":"2015-08-20T13:00",
-		"postPartyDate":"2015-08-21T01:00"
+		"postPartyDate":"2015-08-21T01:00",
+		"useIndividualData":"false"
 	},
 	"travelPlans":[{
 		"pre":[

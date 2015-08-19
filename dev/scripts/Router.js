@@ -198,7 +198,7 @@ define([
 	
 	Router.prototype.routeToCurrentList = function() {
 		if (Hasher.getHash() === 'instagram') {
-			if(DataService().getDepartingCity() && DataService().getPerson()) {
+			if(DataService().getDepartingCity() && (DataService().getPerson() || !DataService().useIndividualData())) {
 				Hasher.setHash('instagram');
 				return;
 			}
