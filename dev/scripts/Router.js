@@ -45,9 +45,6 @@ define([
 
 		var routeHome = Crossroads.addRoute(DEFAULT_HASH);
 		routeHome.matched.add($.proxy(this.phoneHome,this));
-
-		var routeReset = Crossroads.addRoute('reset');
-		routeReset.matched.add($.proxy(this.routeToReset,this));
 		
 		var routePre = Crossroads.addRoute('pre');
 		routePre.matched.add($.proxy(this.routeToPre,this));
@@ -91,6 +88,7 @@ define([
 	Router.prototype.bindEvents = function() {
 		window.addEventListener('history_back', $.proxy(this.routeToPrevHash,this));
 		window.addEventListener('current_list', $.proxy(this.routeToCurrentList,this));
+		window.addEventListener('reset', $.proxy(this.routeToReset,this));
 	};
 
 	Router.prototype.parseHash = function(newHash, oldHash) {
@@ -128,7 +126,6 @@ define([
 			agenda.destroy();
 		} else if (hash === 'instagram') {
 			instagram.destroy();
-		} else if (hash === 'reset') {
 		} else {
 			cardDetails.destroy();
 		}

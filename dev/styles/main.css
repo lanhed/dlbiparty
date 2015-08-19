@@ -43,6 +43,13 @@ body {
   display: inline-block;
 }
 
+.navbar .nav > li > span {
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+  color: #777;
+}
+
 body .start {
   width: 90%;
   margin: 0 auto;

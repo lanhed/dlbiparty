@@ -590,21 +590,17 @@
 				}
 			}
 		},{
-			"type":"hotel",
+			"type":"checkin",
 			"lifespan": {
 				"from":"2015-08-20T09:15",
 				"to":"2015-08-20T11:15"
 			},
 			"info": {
 				"type":"check-in",
-				"depart": {
+				"card": {
+					"title":"Check-in",
 					"date":"2015-08-20",
 					"time":"09.15",
-					"location":"Copenhagen Airport"
-				},
-				"arrive":{
-					"date":"2015-08-20",
-					"time":"11.15",
 					"location":"Copenhagen Airport"
 				}
 			}
@@ -638,7 +634,8 @@
 				"depart": {
 					"date":"2015-08-20",
 					"time":"13.30",
-					"location":"Trondheim Airport - Public transport home or office"
+					"location":"Trondheim Airport",
+					"description":"Public transport home or office"
 				},
 				"arrive":{
 					"date":"2015-08-20",
@@ -647,21 +644,17 @@
 				}
 			}
 		},{
-			"type":"travel",
+			"type":"checkin",
 			"lifespan": {
 				"from":"2015-08-20T22:05",
 				"to":"2015-08-20T22:50"
 			},
 			"info": {
 				"type":"check-in",
-				"depart": {
+				"card": {
+					"title":"check-in",
 					"date":"2015-08-20",
 					"time":"22.05",
-					"location":"Copenhagen Airport"
-				},
-				"arrive":{
-					"date":"2015-08-20",
-					"time":"22.50",
 					"location":"Copenhagen Airport"
 				}
 			}
@@ -695,7 +688,8 @@
 				"depart": {
 					"date":"2015-08-21",
 					"time":"00.25",
-					"location":"Trondheim Airport - Public transport home or office"
+					"location":"Trondheim Airport",
+					"description":"Public transport home or office"
 				},
 				"arrive":{
 					"date":"2015-08-21",
@@ -1110,9 +1104,9 @@
 		"info": {
 			"type":"presentation",
 			"card": {
-				"time":"22.00 (or when toastmaster decide)",
+				"time":"22.00",
 				"title":"DJ",
-				"description":"",
+				"description":"Time depends on when toastmaster decide",
 				"location":"Loft",
 				"details": {
 					"image":""

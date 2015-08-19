@@ -36,8 +36,15 @@ function(
 
 		bindEvents: function(){
 			$('li').on('click','a', $.proxy(this.onMenuClickHandler,this));
+			$('#reset').on('click', $.proxy(this.onResetClickHandler,this));
 			this.icon = this.elem.find('.glyphicon-chevron-left');
 			this.icon.click($.proxy(this.onBackButtonClickHandler, this));
+		},
+
+		onResetClickHandler: function(event) {
+			event.preventDefault();
+			var evt = new Event('reset');
+			window.dispatchEvent(evt);
 		},
 
 		onMenuClickHandler: function(event){

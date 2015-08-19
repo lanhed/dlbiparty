@@ -31,7 +31,6 @@ function(
 
 			$.getJSON('data/data.json', function(data) {
 				that.data = data;
-				console.log('data',data);
 				that.settings = data.settings;
 				var stringifiedData = JSON.stringify(that.data);
 				try {
