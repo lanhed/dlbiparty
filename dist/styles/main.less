@@ -47,7 +47,17 @@ body {
 				}
 			}
 
+		}
+	}
 
+	.nav {
+		&>li {
+			&>span {
+				position: relative;
+				display: block;
+				padding: 10px 15px;
+				color: #777;
+			}
 		}
 	}
 }
@@ -79,6 +89,23 @@ ul.card-wrapper {
 	
 	li {
 		margin:8px;
+
+		&.no-data {
+			text-align: center;
+			display: block;
+			bottom: 0;
+			position: absolute;
+			top: 0px;
+			margin: auto 0;
+			padding: 95% 20px 20px;
+			background: url('../images/DLBi-icon.png') no-repeat 50% 29%;
+			font-size: 1.6em;
+			color: #000;
+
+			&.hide {
+				display: none;
+			}
+		}
 
 		.card {
 			padding:20px;
@@ -119,6 +146,10 @@ ul.card-wrapper {
 					background: url(../images/map-marker-14-64x64-white.png) no-repeat;
 					background-size: cover;
 				}
+			}
+			.description {
+				font-size: 16px;
+				font-style: italic;
 			}
 			
 			.travel-type {
@@ -168,4 +199,118 @@ ul.card-wrapper {
 }
 
 
+/* Instagram feed */
+.instafeed {
+	a {
+		display: inline-block;
+		width: 33.33%;
+		padding: 1px;
+
+		img {
+			width: 100%;
+		}
+	}
+}
+
+.instagram {
+	.show-more {
+		display: none;
+
+		position: relative;
+		width: 80px;
+		height: 80px;
+		margin: 40px auto 10px;
+
+		background: #ed1c27;
+		color: #fff;
+
+		border: 0;
+		border-radius: 50%;
+
+		.loader {
+			display: none;
+			width: 70px;
+			height: 70px;
+			margin-left: -35px;
+			margin-top: -35px;
+
+			&:after {
+				border-color: #fff;
+			}
+		}
+
+		&.visible {
+			display: block;
+		}
+
+		&.loading {
+			.text {
+				display: none;
+			}
+
+			.loader {
+				display: block;
+			}
+		}
+	}
+}
+
+.info {
+	padding:20px;
+}
+
+.loader {
+	@size: 80px;
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: @size;
+	height: @size;
+
+	margin-left: -@size * 0.5;
+	margin-top: -@size * 0.5;
+
+	clip: rect(0, @size, @size, @size * 0.5);
+
+	-webkit-animation: spin-outer 1.5s linear infinite;
+	animation: spin-outer 1.5s linear infinite;
+
+	&:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+
+		clip: rect(0, @size, @size, @size * 0.5);
+
+		box-sizing: border-box;
+		border: solid 4px #ed1c27;
+		border-radius: 50%;
+
+		-webkit-animation: spin-inner 1.5s ease-in-out infinite;
+		animation: spin-inner 1.5s ease-in-out infinite;
+	}
+}
+
+
+
+@-webkit-keyframes spin-outer {
+	0% { -webkit-transform: rotateZ(0deg); }
+	100% { -webkit-transform: rotateZ(220deg); }
+}
+@keyframes spin-outer {
+	0% { transform: rotateZ(0deg); }
+	100% { transform: rotateZ(220deg); }
+}
+@-webkit-keyframes spin-inner {
+	0% { -webkit-transform: rotateZ(-140deg); }
+	100% { -webkit-transform: rotateZ(140deg); }
+}
+@keyframes spin-inner {
+	0% { transform: rotateZ(-140deg); }
+	100% { transform: rotateZ(140deg); }
+}
 

@@ -1,0 +1,7 @@
+<h4>Find yourself in the list</h4>
+<select name="person" id="person" class="person form-control">
+	<option selected="true">Choose from list</option>
+	{{#each this}}
+		<option value="{{@index}}">{{name}}</option>
+	{{/each}}
+</select>

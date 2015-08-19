@@ -65,22 +65,23 @@ function(
 				dateData.fromTime = dateFromTime;
 				dateData.toTime = dateToTime;
 
+				/*console.log((dateFromTime <= nowTime), (dateToTime >= nowTime),d);
+				console.log(now, dateFrom, dateTo);
+				console.log('');*/
 				if(dateFromTime <= nowTime && dateToTime >= nowTime) {
 					d.active = foundActiveCard = true;
 				} else if (dateFromTime <= nowTime && dateToTime <= nowTime) {
-					// remove data as well?!
+					
 					d.removed = true;
 					deleteData.push(i);
 				}
 			}
-
 			if (deleteData.length > 0) {
 				for (var i = deleteData.length - 1; i >= 0; i--) {
 					var key = deleteData[i];
-					var deleted = this.data.splice(key);
+					var deleted = this.data.splice(key,1);
 				};
 			}
-
 			if (!foundActiveCard && this.data[0]) {
 				this.data[0].active = true;
 			}

@@ -27,7 +27,7 @@ function(
 		var that = this;
 		var promise = $.Deferred();
 
-		if (!localStorage.data) {
+		if (!localStorage.data || !localStorage.person || !localStorage.departingCity) {
 
 			$.getJSON('data/data.json', function(data) {
 				that.data = data;
@@ -140,11 +140,32 @@ function(
 		*/
 
 		var data = null;
-		console.log('getCardDataFromId',id);
 		for (var i = 0; i < this.allCards.length; i++) {
 			var cardData = this.allCards[i];
 			if (cardData.id === Number(id)) {
 				return cardData.card;
+			}
+		}
+	};
+
+	DataService.prototype.getDetailsDataFromCardId = function(id) {
+		/*
+		Input parameters:
+			id: Int
+
+		allCards: Array
+			card: Object { id, card }
+
+		returns:
+			Object, card
+		*/
+
+		var data = null;
+		for (var i = 0; i < this.allCards.length; i++) {
+			var cardData = this.allCards[i];
+			if (cardData.id === Number(id)) {
+				console.log(cardData);
+				//return cardData.card;
 			}
 		}
 	};
@@ -206,6 +227,7 @@ function(
 
 	DataService.prototype.clearData = function() {
 		this.data = null;
+		this.person = null;
 		this.cards = null;
 		this.allCards = null;
 		this.cardTypeIndex = null;
@@ -219,11 +241,13 @@ function(
 		try {
 			localStorage.removeItem('departingCity');
 			localStorage.removeItem('data');
+			localStorage.removeItem('person');
 			//console.log('localStorage',localStorage.departingCity, localStorage.data);
 		} catch(e) {
 			try {
 				sessionStorage.removeItem('departingCity');
 				sessionStorage.removeItem('data');
+				sessionStorage.removeItem('person');
 			} catch (e) {
 				return;
 			}
@@ -260,6 +284,41 @@ function(
 			}
 		}
 		return this.departingCity;
+	};
+
+	DataService.prototype.setPerson = function(data) {
+		var stringifiedData = JSON.stringify(data);
+		try {
+			localStorage.person = stringifiedData;
+			//console.log('departingCity stored in localStorage');
+		} catch (e) {
+			try {
+				sessionStorage.setItem('person', stringifiedData);
+				//console.log('departingCity stored in sessionStorage');
+			} catch (e) {
+				//console.log('sessionStorage not allowed');
+			}
+		}
+		this.person = data;
+	};
+
+	DataService.prototype.getPerson = function() {
+
+		if (!this.person) {
+			var data = null;
+			try {
+				this.person = JSON.parse(localStorage.person);
+			} catch(e) {
+				try {
+					this.person = JSON.parse(sessionStorage.getItem('person'));
+				} catch (e) {
+					// departingCity has not been able to be stored. Reset app:
+					Hasher.setHash('reset');
+					return;
+				}
+			}
+		}
+		return this.person;
 	};
 
 	DataService.prototype.getTypeFromTypeIndex = function(index) {

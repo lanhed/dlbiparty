@@ -35,7 +35,9 @@ define([
 
 			window.instagram = this;
 		},
-		destroy: function() {},
+		destroy: function() {
+			this.$elem.empty();
+		},
 
 		render: function() {
 			var compiled = Handlebars.compile(template);

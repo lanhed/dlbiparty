@@ -241,6 +241,14 @@ ul.card-wrapper li .card .section.arrival .details {
   display: block;
 }
 
+.info {
+  padding: 20px;
+}
+
+.info ul {
+  padding-left: 15px;
+}
+
 .loader {
   position: absolute;
   top: 50%;

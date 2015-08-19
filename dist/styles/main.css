@@ -43,6 +43,13 @@ body {
   display: inline-block;
 }
 
+.navbar .nav > li > span {
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+  color: #777;
+}
+
 body .start {
   width: 90%;
   margin: 0 auto;
@@ -74,6 +81,23 @@ ul.card-wrapper {
 
 ul.card-wrapper li {
   margin: 8px;
+}
+
+ul.card-wrapper li.no-data {
+  text-align: center;
+  display: block;
+  bottom: 0;
+  position: absolute;
+  top: 0px;
+  margin: auto 0;
+  padding: 95% 20px 20px;
+  background: url('../images/DLBi-icon.png') no-repeat 50% 29%;
+  font-size: 1.6em;
+  color: #000;
+}
+
+ul.card-wrapper li.no-data.hide {
+  display: none;
 }
 
 ul.card-wrapper li .card {
@@ -124,6 +148,11 @@ ul.card-wrapper li .card.active .icon-location {
   background-size: cover;
 }
 
+ul.card-wrapper li .card .description {
+  font-size: 16px;
+  font-style: italic;
+}
+
 ul.card-wrapper li .card .travel-type {
   font-weight: bold;
   font-size: 20px;
@@ -162,4 +191,134 @@ ul.card-wrapper li .card .section.arrival .details {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
+}
+
+/* Instagram feed */
+
+.instafeed a {
+  display: inline-block;
+  width: 33.33%;
+  padding: 1px;
+}
+
+.instafeed a img {
+  width: 100%;
+}
+
+.instagram .show-more {
+  display: none;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin: 40px auto 10px;
+  background: #ed1c27;
+  color: #fff;
+  border: 0;
+  border-radius: 50%;
+}
+
+.instagram .show-more .loader {
+  display: none;
+  width: 70px;
+  height: 70px;
+  margin-left: -35px;
+  margin-top: -35px;
+}
+
+.instagram .show-more .loader:after {
+  border-color: #fff;
+}
+
+.instagram .show-more.visible {
+  display: block;
+}
+
+.instagram .show-more.loading .text {
+  display: none;
+}
+
+.instagram .show-more.loading .loader {
+  display: block;
+}
+
+.info {
+  padding: 20px;
+}
+
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80px;
+  height: 80px;
+  margin-left: -40px;
+  margin-top: -40px;
+  clip: rect(0, 80px, 80px, 40px);
+  -webkit-animation: spin-outer 1.5s linear infinite;
+  animation: spin-outer 1.5s linear infinite;
+}
+
+.loader:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  clip: rect(0, 80px, 80px, 40px);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: solid 4px #ed1c27;
+  border-radius: 50%;
+  -webkit-animation: spin-inner 1.5s ease-in-out infinite;
+  animation: spin-inner 1.5s ease-in-out infinite;
+}
+
+@-webkit-keyframes spin-outer {
+  0% {
+    -webkit-transform: rotateZ(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotateZ(220deg);
+  }
+}
+
+@keyframes spin-outer {
+  0% {
+    -webkit-transform: rotateZ(0deg);
+    -ms-transform: rotateZ(0deg);
+    transform: rotateZ(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotateZ(220deg);
+    -ms-transform: rotateZ(220deg);
+    transform: rotateZ(220deg);
+  }
+}
+
+@-webkit-keyframes spin-inner {
+  0% {
+    -webkit-transform: rotateZ(-140deg);
+  }
+
+  100% {
+    -webkit-transform: rotateZ(140deg);
+  }
+}
+
+@keyframes spin-inner {
+  0% {
+    -webkit-transform: rotateZ(-140deg);
+    -ms-transform: rotateZ(-140deg);
+    transform: rotateZ(-140deg);
+  }
+
+  100% {
+    -webkit-transform: rotateZ(140deg);
+    -ms-transform: rotateZ(140deg);
+    transform: rotateZ(140deg);
+  }
 }

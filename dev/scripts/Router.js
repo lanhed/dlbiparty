@@ -8,6 +8,7 @@ define([
 	'CardManager',
 
 	'departingSelection',
+	'info',
 	'agenda',
 	'desktopMsg',
 	'instagram',
@@ -23,6 +24,7 @@ define([
 	CardManager,
 
 	departingSelection,
+	info,
 	agenda,
 	desktopMsg,
 	instagram,
@@ -46,6 +48,9 @@ define([
 		var routeHome = Crossroads.addRoute(DEFAULT_HASH);
 		routeHome.matched.add($.proxy(this.phoneHome,this));
 		
+		var routeInfo = Crossroads.addRoute('info');
+		routeInfo.matched.add($.proxy(this.routeToInfo,this));
+		
 		var routePre = Crossroads.addRoute('pre');
 		routePre.matched.add($.proxy(this.routeToPre,this));
 		
@@ -64,12 +69,6 @@ define([
 			if (that.hashHistory.length > 0) {
 				type = that.hashHistory[that.hashHistory.length - 1];
 			}
-			cardDetails.init($('.page-wrapper'), id);
-
-			if (!navbar.isInitiated()) {
-				navbar.init($('.navbar-wrapper'));
-			}
-			navbar.showBackButton();
 		});
 		
 		this.bindEvents();
@@ -89,6 +88,31 @@ define([
 		window.addEventListener('history_back', $.proxy(this.routeToPrevHash,this));
 		window.addEventListener('current_list', $.proxy(this.routeToCurrentList,this));
 		window.addEventListener('reset', $.proxy(this.routeToReset,this));
+		window.addEventListener('details',$.proxy(this.routeToDetails,this));
+	};
+
+	Router.prototype.routeToDetails = function(event) {
+		var id = event.detail.cardId;
+		var cardType = event.detail.cardType;
+		var cardData = DataService().getCardDataFromId(id);
+		console.log(id, cardType, cardData);
+		var data = null;
+		if (cardType === 'depart') {
+			data = cardData.info.depart.details;
+		} else if (cardType === 'arrive') {
+			data = cardData.info.arrive.details;
+		} else  if (cardType === 'event') {
+			data = cardData.info.card.details;
+		}
+
+		var oldHash = Hasher.getHash();
+		Hasher.setHash('details/'+id);
+		cardDetails.init($('.page-wrapper'), id, data);
+
+		if (!navbar.isInitiated()) {
+			navbar.init($('.navbar-wrapper'));
+		}
+		navbar.showBackButton();
 	};
 
 	Router.prototype.parseHash = function(newHash, oldHash) {
@@ -100,7 +124,7 @@ define([
 				agenda.destroy();
 			} else if (oldHash === 'instagram') {
 				instagram.destroy();
-			} else { // details
+			} else {
 				cardDetails.destroy();
 			}
 		}
@@ -139,6 +163,11 @@ define([
 		window.app().forceDataReload();
 	};
 
+	Router.prototype.routeToInfo = function() {
+		Crossroads.parse('info');
+		info.init($('.page-wrapper'));
+	};
+
 	Router.prototype.routeToInstagram = function() {
 		Crossroads.parse('instagram');
 		instagram.init($('.page-wrapper'));
@@ -169,7 +198,10 @@ define([
 	
 	Router.prototype.routeToCurrentList = function() {
 		if (Hasher.getHash() === 'instagram') {
-			return;
+			if(DataService().getDepartingCity() && DataService().getPerson()) {
+				Hasher.setHash('instagram');
+				return;
+			}
 		}
 
 		Hasher.setHash(this.getCurrentViewInTime());

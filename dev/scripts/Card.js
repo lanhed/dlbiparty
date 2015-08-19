@@ -60,7 +60,17 @@ function(
 	};
 
 	Card.prototype.bindEvents = function(data) {
-		if (data.info.details) {
+		var hasDetail = false;
+		if (data.info.depart || data.info.arrive) {
+			if (data.info.depart.details || data.info.arrive.details) {
+				hasDetail = true;
+			}
+		} else {
+			if (data.info.card.details) {
+				hasDetail = true;
+			}
+		}
+		if (hasDetail) {
 			this.elem.find('.details').on('click', $.proxy(this.detailsClickHandler,this));
 		}
 
@@ -79,7 +89,7 @@ function(
 		//console.log('checking interval for card', this.id);
 
 		if (this.lifespanData.fromTime <= time && this.lifespanData.toTime <= time) {
-			console.log('remove card', this.id);
+			//console.log('remove card', this.id);
 			clearInterval(this.interval);
 			var e = new CustomEvent('remove-card', {'detail': { 'cardId': this.id }});
 			window.dispatchEvent(e);
@@ -87,7 +97,10 @@ function(
 	};
 
 	Card.prototype.detailsClickHandler = function(event) {
-		Hasher.setHash('details/'+this.id);
+		var type = $(event.currentTarget).data('type');
+		var evt = new CustomEvent('details', {'detail':{'cardId': this.id, 'cardType':type}})
+		window.dispatchEvent(evt);
+		//Hasher.setHash('details/'+this.id);
 	};
 
 	return Card;

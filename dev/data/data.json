@@ -1,20 +1,33 @@
 {
 	"cities": [
 		{
-			"name":"Copenhagen"
+			"name":"Copenhagen",
+			"people":[]
 		},{
-			"name":"Gothenborg"
+			"name":"Gothenborg",
+			"people":[]
 		},{
-			"name":"Malmö"
+			"name":"Malmö",
+			"people":[{
+				"name":"Patric Lanhed",
+				"usr":"patric",
+				"pwd":"lanhed"
+			},{
+				"name":"Joakim Roos",
+				"usr":"joakim",
+				"pwd":"roos"
+			}]
 		},{
-			"name":"Stockholm"
+			"name":"Stockholm",
+			"people":[]
 		},{
-			"name":"Trondheim"
+			"name":"Trondheim",
+			"people":[]
 		}
 	],
 	"settings":{
-		"partyDate":"2015-08-19T13:00",
-		"postPartyDate":"2015-08-20T07:00"
+		"partyDate":"2015-08-20T13:00",
+		"postPartyDate":"2015-08-21T01:00"
 	},
 	"travelPlans":[{
 		"pre":[
@@ -30,40 +43,51 @@
 		{
 			"type":"travel",
 			"lifespan": {
-				"from":"2015-08-19T11:30",
-				"to":"2015-08-19T13:00"
+				"from":"2015-08-20T11:30",
+				"to":"2015-08-20T13:00"
 			},
 			"info": {
 				"type":"bus",
 				"depart": {
-					"date":"2015-08-19",
+					"date":"2015-08-20",
 					"time":"11.30",
 					"location":"Copenhagen (Vermundsgade 40) "
 				},
 				"arrive":{
-					"date":"2015-08-19",
+					"date":"2015-08-20",
 					"time":"13.00",
-					"location":"Alnarp"
+					"location":"Alnarp",
+					"details": {
+						"title":"Arrival to Alnarp",
+						"description":"Travel Point – 13.00 & 1.45",
+						"image":"images/alnarp-travel-point.jpg"
+					}
 				}
 			}
 		}],
 		"post":[{
 			"type":"travel",
 			"lifespan": {
-				"from":"2015-08-20T01:45",
-				"to":"2015-08-20T02:30"
+				"from":"2015-08-21T01:45",
+				"to":"2015-08-21T02:30"
 			},
 			"info": {
 				"type":"bus",
 				"depart": {
-					"date":"2015-08-20",
+					"date":"2015-08-21",
 					"time":"01.45",
-					"location":"Alnarp"
+					"location":"Alnarp",
+					"details": {
+						"title":"Arrival to Alnarp",
+						"description":"Travel Point – 13.00 & 1.45",
+						"image":"images/alnarp-travel-point.jpg"
+					}
 				},
 				"arrive":{
-					"date":"2015-08-20",
+					"date":"2015-08-21",
 					"time":"03.15",
-					"location":"Copenhagen, Vermundsgade 40 A with stop at Centralstation"
+					"location":"Copenhagen",
+					"description":"Vermundsgade 40 A with stop at Centralstation"
 				}
 			}
 		}]
@@ -82,38 +106,49 @@
 		"pre":[{
 			"type":"travel",
 			"lifespan": {
-				"from":"2015-08-19T08:30",
-				"to":"2015-08-19T13:00"
+				"from":"2015-08-20T08:30",
+				"to":"2015-08-20T13:00"
 			},
 			"info": {
 				"type":"bus",
 				"depart": {
-					"date":"2015-08-19",
+					"date":"2015-08-20",
 					"time":"08.30",
-					"location":"Gothenborg (2 stops on the way)"
+					"location":"Gothenborg",
+					"description":"2 stops on the way"
 				},
 				"arrive":{
-					"date":"2015-08-19",
+					"date":"2015-08-20",
 					"time":"13.00",
-					"location":"Alnarp"
+					"location":"Alnarp",
+					"details": {
+						"title":"Arrival to Alnarp",
+						"description":"Travel Point – 13.00 & 1.45",
+						"image":"images/alnarp-travel-point.jpg"
+					}
 				}
 			}
 		}],
 		"post":[{
 			"type":"travel",
 			"lifespan": {
-				"from":"2015-08-20T01:45",
-				"to":"2015-08-20T02:30"
+				"from":"2015-08-21T01:45",
+				"to":"2015-08-21T02:30"
 			},
 			"info": {
 				"type":"bus",
 				"depart": {
-					"date":"2015-08-20",
+					"date":"2015-08-21",
 					"time":"01.45",
-					"location":"Alnarp"
+					"location":"Alnarp",
+					"details": {
+						"title":"Arrival to Alnarp",
+						"description":"Travel Point – 13.00 & 1.45",
+						"image":"images/alnarp-travel-point.jpg"
+					}
 				},
 				"arrive":{
-					"date":"2015-08-20",
+					"date":"2015-08-21",
 					"time":"02.30",
 					"location":"Hotel Finn, Lund"
 				}
@@ -121,14 +156,14 @@
 		},{
 			"type":"hotel",
 			"lifespan": {
-				"from":"2015-08-20T02:30",
-				"to":"2015-08-20T07:45"
+				"from":"2015-08-21T02:30",
+				"to":"2015-08-21T07:45"
 			},
 			"info": {
 				"type":"hotel",
 				"card": {
 					"title":"Check in",
-					"date":"2015-08-20",
+					"date":"2015-08-21",
 					"time":"02.30",
 					"location":"Hotel Finn, Lund"
 				}
@@ -136,18 +171,19 @@
 		},{
 			"type":"travel",
 			"lifespan": {
-				"from":"2015-08-20T09:45",
-				"to":"2015-08-20T14:15"
+				"from":"2015-08-21T09:45",
+				"to":"2015-08-21T14:15"
 			},
 			"info": {
 				"type":"bus",
 				"depart": {
-					"date":"2015-08-20",
+					"date":"2015-08-21",
 					"time":"09.45",
-					"location":"Hotel Finn, Lund (2 stops on the way)"
+					"location":"Hotel Finn, Lund",
+					"description":"2 stops on the way"
 				},
 				"arrive":{
-					"date":"2015-08-20",
+					"date":"2015-08-21",
 					"time":"14.15",
 					"location":"Gothenborg"
 				}
@@ -168,38 +204,48 @@
 		"pre":[{
 			"type":"travel",
 			"lifespan": {
-				"from":"2015-08-19T12:15",
-				"to":"2015-08-19T13:00"
+				"from":"2015-08-20T12:15",
+				"to":"2015-08-20T13:00"
 			},
 			"info": {
 				"type":"bus",
 				"depart": {
-					"date":"2015-08-19",
+					"date":"2015-08-20",
 					"time":"12.15",
 					"location":"Malmö"
 				},
 				"arrive":{
-					"date":"2015-08-19",
+					"date":"2015-08-20",
 					"time":"13.00",
-					"location":"Alnarp"
+					"location":"Alnarp",
+					"details": {
+						"title":"Arrival to Alnarp",
+						"description":"Travel Point – 13.00 & 1.45",
+						"image":"images/alnarp-travel-point.jpg"
+					}
 				}
 			}
 		}],
 		"post":[{
 			"type":"travel",
 			"lifespan": {
-				"from":"2015-08-20T01:45",
-				"to":"2015-08-20T02:30"
+				"from":"2015-08-21T01:45",
+				"to":"2015-08-21T02:30"
 			},
 			"info": {
 				"type":"bus",
 				"depart": {
-					"date":"2015-08-20",
+					"date":"2015-08-21",
 					"time":"01.45",
-					"location":"Alnarp"
+					"location":"Alnarp",
+					"details": {
+						"title":"Arrival to Alnarp",
+						"description":"Travel Point – 13.00 & 1.45",
+						"image":"images/alnarp-travel-point.jpg"
+					}
 				},
 				"arrive":{
-					"date":"2015-08-20",
+					"date":"2015-08-21",
 					"time":"02.30",
 					"location":"Malmö, Brogatan 10"
 				}
@@ -219,40 +265,37 @@
 
 
 	{
-		"pre":[		{
-			"type":"travel",
+		"pre":[{
+			"type":"hotel",
 			"lifespan": {
-				"from":"2015-08-19T07:15",
-				"to":"2015-08-19T07:30"
+				"from":"2015-08-20T07:15",
+				"to":"2015-08-20T07:30"
 			},
 			"info": {
-				"type":"gathering",
-				"depart": {
-					"date":"2015-08-19",
+				"type":"hotel",
+				"card": {
+					"date":"2015-08-20",
 					"time":"07.15",
-					"location":"Arlanda Express-tågen (Track 1 & 2)"
-				},
-				"arrive":{
-					"date":"2015-08-19",
-					"time":"07.30",
-					"location":"Arlanda Express-tågen (Track 1 & 2)"
+					"location":"Arlanda Express",
+					"description":"Track 1 & 2"
 				}
 			}
 		},{
 			"type":"travel",
 			"lifespan": {
-				"from":"2015-08-19T08:20",
-				"to":"2015-08-19T08:40"
+				"from":"2015-08-20T08:20",
+				"to":"2015-08-20T08:40"
 			},
 			"info": {
 				"type":"train",
 				"depart": {
-					"date":"2015-08-19",
+					"date":"2015-08-20",
 					"time":"08.20",
-					"location":"Arlanda Express-tågen (Track 1 & 2)"
+					"location":"Arlanda Express",
+					"description":"Track 1 & 2"
 				},
 				"arrive":{
-					"date":"2015-08-19",
+					"date":"2015-08-20",
 					"time":"08.40",
 					"location":"Arlanda Airport"
 				}
@@ -260,18 +303,18 @@
 		},{
 			"type":"travel",
 			"lifespan": {
-				"from":"2015-08-19T08:40",
-				"to":"2015-08-19T09:50"
+				"from":"2015-08-20T08:40",
+				"to":"2015-08-20T09:50"
 			},
 			"info": {
 				"type":"flight",
 				"depart": {
-					"date":"2015-08-19",
+					"date":"2015-08-20",
 					"time":"08.40",
 					"location":"Arlanda Airport"
 				},
 				"arrive":{
-					"date":"2015-08-19",
+					"date":"2015-08-20",
 					"time":"09.50",
 					"location":"Copenhagen Airport"
 				}
@@ -279,18 +322,18 @@
 		},{
 			"type":"travel",
 			"lifespan": {
-				"from":"2015-08-19T09:50",
-				"to":"2015-08-19T11:10"
+				"from":"2015-08-20T09:50",
+				"to":"2015-08-20T11:10"
 			},
 			"info": {
 				"type":"train",
 				"depart": {
-					"date":"2015-08-19",
+					"date":"2015-08-20",
 					"time":"09.50",
 					"location":"Copenhagen Airport"
 				},
 				"arrive":{
-					"date":"2015-08-19",
+					"date":"2015-08-20",
 					"time":"12.15",
 					"location":"Malmö"
 				}
@@ -298,38 +341,48 @@
 		},{
 			"type":"travel",
 			"lifespan": {
-				"from":"2015-08-19T11:10",
-				"to":"2015-08-19T12:15"
+				"from":"2015-08-20T11:10",
+				"to":"2015-08-20T12:15"
 			},
 			"info": {
 				"type":"bus",
 				"depart": {
-					"date":"2015-08-19",
+					"date":"2015-08-20",
 					"time":"12.15",
 					"location":"Malmö"
 				},
 				"arrive":{
-					"date":"2015-08-19",
+					"date":"2015-08-20",
 					"time":"13.00",
-					"location":"Alnarp"
+					"location":"Alnarp",
+					"details": {
+						"title":"Arrival to Alnarp",
+						"description":"Travel Point – 13.00 & 1.45",
+						"image":"images/alnarp-travel-point.jpg"
+					}
 				}
 			}
 		}],
 		"post":[{
 			"type":"travel",
 			"lifespan": {
-				"from":"2015-08-20T01:45",
-				"to":"2015-08-20T02:30"
+				"from":"2015-08-21T01:45",
+				"to":"2015-08-21T02:30"
 			},
 			"info": {
 				"type":"bus",
 				"depart": {
-					"date":"2015-08-20",
+					"date":"2015-08-21",
 					"time":"01.45",
-					"location":"Alnarp"
+					"location":"Alnarp",
+					"details": {
+						"title":"Arrival to Alnarp",
+						"description":"Travel Point – 13.00 & 1.45",
+						"image":"images/alnarp-travel-point.jpg"
+					}
 				},
 				"arrive":{
-					"date":"2015-08-20",
+					"date":"2015-08-21",
 					"time":"02.30",
 					"location":"Malmö, Hotel Finn"
 				}
@@ -337,18 +390,18 @@
 		},{
 			"type":"travel",
 			"lifespan": {
-				"from":"2015-08-20T07:45",
-				"to":"2015-08-20T08:15"
+				"from":"2015-08-21T07:45",
+				"to":"2015-08-21T08:15"
 			},
 			"info": {
 				"type":"bus",
 				"depart": {
-					"date":"2015-08-20",
+					"date":"2015-08-21",
 					"time":"07.45",
 					"location":"Malmö, Hotel Finn"
 				},
 				"arrive":{
-					"date":"2015-08-20",
+					"date":"2015-08-21",
 					"time":"08.15",
 					"location":"Lund Centralstation"
 				}
@@ -356,18 +409,18 @@
 		},{
 			"type":"travel",
 			"lifespan": {
-				"from":"2015-08-20T07:15",
-				"to":"2015-08-20T08:20"
+				"from":"2015-08-21T07:15",
+				"to":"2015-08-21T08:20"
 			},
 			"info": {
 				"type":"train",
 				"depart": {
-					"date":"2015-08-20",
+					"date":"2015-08-21",
 					"time":"08.15",
 					"location":"Lund Centralstation"
 				},
 				"arrive":{
-					"date":"2015-08-20",
+					"date":"2015-08-21",
 					"time":"09.15",
 					"location":"Copenhagen Airport"
 				}
@@ -375,18 +428,18 @@
 		},{
 			"type":"hotel",
 			"lifespan": {
-				"from":"2015-08-20T10:20",
-				"to":"2015-08-20T11:20"
+				"from":"2015-08-21T10:20",
+				"to":"2015-08-21T11:20"
 			},
 			"info": {
 				"type":"check-in",
 				"depart": {
-					"date":"2015-08-20",
+					"date":"2015-08-21",
 					"time":"10.20",
 					"location":"Copenhagen Airport"
 				},
 				"arrive":{
-					"date":"2015-08-20",
+					"date":"2015-08-21",
 					"time":"11.20",
 					"location":"Copenhagen Airport"
 				}
@@ -394,18 +447,18 @@
 		},{
 			"type":"travel",
 			"lifespan": {
-				"from":"2015-08-20T11:20",
-				"to":"2015-08-20T12:30"
+				"from":"2015-08-21T11:20",
+				"to":"2015-08-21T12:30"
 			},
 			"info": {
 				"type":"flight",
 				"depart": {
-					"date":"2015-08-20",
+					"date":"2015-08-21",
 					"time":"12.00",
 					"location":"Copenhagen Airport"
 				},
 				"arrive":{
-					"date":"2015-08-20",
+					"date":"2015-08-21",
 					"time":"13.30",
 					"location":"Arlanda Airport"
 				}
@@ -423,18 +476,18 @@
 		"pre":[{
 			"type":"travel",
 			"lifespan": {
-				"from":"2015-08-19T07:00",
-				"to":"2015-08-19T07:50"
+				"from":"2015-08-20T07:00",
+				"to":"2015-08-20T07:50"
 			},
 			"info": {
 				"type":"bus",
 				"depart": {
-					"date":"2015-08-19",
+					"date":"2015-08-20",
 					"time":"07.00",
 					"location":"Flygbussen at Trondheim S"
 				},
 				"arrive":{
-					"date":"2015-08-19",
+					"date":"2015-08-20",
 					"time":"07.50",
 					"location":"Trondheim Airport"
 				}
@@ -442,13 +495,13 @@
 		},{
 			"type":"checkin",
 			"lifespan": {
-				"from":"2015-08-19T07:50",
-				"to":"2015-08-19T08:20"
+				"from":"2015-08-20T07:50",
+				"to":"2015-08-20T08:20"
 			},
 			"info": {
 				"type":"Check-in",
 				"card": {
-					"date":"2015-08-19",
+					"date":"2015-08-20",
 					"time":"07.50",
 					"title":"Check-in",
 					"location":"Trondheim Airport"
@@ -457,19 +510,19 @@
 		},{
 			"type":"travel",
 			"lifespan": {
-				"from":"2015-08-19T08:20",
-				"to":"2015-08-19T09:15"
+				"from":"2015-08-20T08:20",
+				"to":"2015-08-20T09:15"
 			},
 			"info": {
 				"type":"flight",
 				"depart": {
-					"date":"2015-08-19",
+					"date":"2015-08-20",
 					"time":"08.20",
 					"location":"Trondheim Airport",
 					"description":"You have to check in for both filghts. Flight Oslo-Copenhagen 10:00-11:10"
 				},
 				"arrive":{
-					"date":"2015-08-19",
+					"date":"2015-08-20",
 					"time":"09.15",
 					"location":"Oslo Airport"
 				}
@@ -477,18 +530,18 @@
 		},{
 			"type":"travel",
 			"lifespan": {
-				"from":"2015-08-19T10:00",
-				"to":"2015-08-19T11:10"
+				"from":"2015-08-20T10:00",
+				"to":"2015-08-20T11:10"
 			},
 			"info": {
 				"type":"flight",
 				"depart": {
-					"date":"2015-08-19",
+					"date":"2015-08-20",
 					"time":"10.00",
 					"location":"Oslo Airport"
 				},
 				"arrive":{
-					"date":"2015-08-19",
+					"date":"2015-08-20",
 					"time":"11.10",
 					"location":"Copenhagen Airport"
 				}
@@ -496,18 +549,18 @@
 		},{
 			"type":"travel",
 			"lifespan": {
-				"from":"2015-08-19T11:10",
-				"to":"2015-08-19T12:15"
+				"from":"2015-08-20T11:10",
+				"to":"2015-08-20T12:15"
 			},
 			"info": {
 				"type":"train",
 				"depart": {
-					"date":"2015-08-19",
+					"date":"2015-08-20",
 					"time":"11.10",
 					"location":"Øresundståg, Copenhagen Airport"
 				},
 				"arrive":{
-					"date":"2015-08-19",
+					"date":"2015-08-20",
 					"time":"12.15",
 					"location":"Malmö (Triangeln station)"
 				}
@@ -515,38 +568,48 @@
 		},{
 			"type":"travel",
 			"lifespan": {
-				"from":"2015-08-19T11:10",
-				"to":"2015-08-19T12:15"
+				"from":"2015-08-20T11:10",
+				"to":"2015-08-20T12:15"
 			},
 			"info": {
 				"type":"bus",
 				"depart": {
-					"date":"2015-08-19",
+					"date":"2015-08-20",
 					"time":"12.15",
 					"location":"Malmö, Brogatan 10"
 				},
 				"arrive":{
-					"date":"2015-08-19",
+					"date":"2015-08-20",
 					"time":"13.00",
-					"location":"Alnarp"
+					"location":"Alnarp",
+					"details": {
+						"title":"Arrival to Alnarp",
+						"description":"Travel Point – 13.00 & 1.45",
+						"image":"images/alnarp-travel-point.jpg"
+					}
 				}
 			}
 		}],
 		"post":[		{
 			"type":"travel",
 			"lifespan": {
-				"from":"2015-08-20T01:45",
-				"to":"2015-08-20T02:30"
+				"from":"2015-08-21T01:45",
+				"to":"2015-08-21T02:30"
 			},
 			"info": {
 				"type":"bus",
 				"depart": {
-					"date":"2015-08-20",
+					"date":"2015-08-21",
 					"time":"01.45",
-					"location":"Alnarp"
+					"location":"Alnarp",
+					"details": {
+						"title":"Arrival to Alnarp",
+						"description":"Travel Point – 13.00 & 1.45",
+						"image":"images/alnarp-travel-point.jpg"
+					}
 				},
 				"arrive":{
-					"date":"2015-08-20",
+					"date":"2015-08-21",
 					"time":"02.30",
 					"location":"Malmö, Hotel Finn"
 				}
@@ -554,18 +617,18 @@
 		},{
 			"type":"travel",
 			"lifespan": {
-				"from":"2015-08-20T07:45",
-				"to":"2015-08-20T08:15"
+				"from":"2015-08-21T07:45",
+				"to":"2015-08-21T08:15"
 			},
 			"info": {
 				"type":"bus",
 				"depart": {
-					"date":"2015-08-20",
+					"date":"2015-08-21",
 					"time":"07.45",
 					"location":"Malmö, Hotel Finn"
 				},
 				"arrive":{
-					"date":"2015-08-20",
+					"date":"2015-08-21",
 					"time":"08.15",
 					"location":"Lund Centralstation"
 				}
@@ -573,18 +636,18 @@
 		},{
 			"type":"travel",
 			"lifespan": {
-				"from":"2015-08-20T07:15",
-				"to":"2015-08-20T08:20"
+				"from":"2015-08-21T07:15",
+				"to":"2015-08-21T08:20"
 			},
 			"info": {
 				"type":"train",
 				"depart": {
-					"date":"2015-08-20",
+					"date":"2015-08-21",
 					"time":"08.15",
 					"location":"Lund Centralstation"
 				},
 				"arrive":{
-					"date":"2015-08-20",
+					"date":"2015-08-21",
 					"time":"09.15",
 					"location":"Copenhagen Airport"
 				}
@@ -592,14 +655,14 @@
 		},{
 			"type":"checkin",
 			"lifespan": {
-				"from":"2015-08-20T09:15",
-				"to":"2015-08-20T11:15"
+				"from":"2015-08-21T09:15",
+				"to":"2015-08-21T11:15"
 			},
 			"info": {
 				"type":"check-in",
 				"card": {
 					"title":"Check-in",
-					"date":"2015-08-20",
+					"date":"2015-08-21",
 					"time":"09.15",
 					"location":"Copenhagen Airport"
 				}
@@ -607,18 +670,18 @@
 		},{
 			"type":"travel",
 			"lifespan": {
-				"from":"2015-08-20T12:00",
-				"to":"2015-08-20T13:30"
+				"from":"2015-08-21T12:00",
+				"to":"2015-08-21T13:30"
 			},
 			"info": {
 				"type":"flight",
 				"depart": {
-					"date":"2015-08-20",
+					"date":"2015-08-21",
 					"time":"12.00",
 					"location":"Copenhagen Airport"
 				},
 				"arrive":{
-					"date":"2015-08-20",
+					"date":"2015-08-21",
 					"time":"13.30",
 					"location":"Trondheim Airport"
 				}
@@ -626,19 +689,19 @@
 		},{
 			"type":"travel",
 			"lifespan": {
-				"from":"2015-08-20T13:30",
-				"to":"2015-08-20T14:00"
+				"from":"2015-08-21T13:30",
+				"to":"2015-08-21T14:00"
 			},
 			"info": {
 				"type":"bus",
 				"depart": {
-					"date":"2015-08-20",
+					"date":"2015-08-21",
 					"time":"13.30",
 					"location":"Trondheim Airport",
 					"description":"Public transport home or office"
 				},
 				"arrive":{
-					"date":"2015-08-20",
+					"date":"2015-08-21",
 					"time":"14.00",
 					"location":"Home or office"
 				}
@@ -646,14 +709,14 @@
 		},{
 			"type":"checkin",
 			"lifespan": {
-				"from":"2015-08-20T22:05",
-				"to":"2015-08-20T22:50"
+				"from":"2015-08-21T22:05",
+				"to":"2015-08-21T22:50"
 			},
 			"info": {
 				"type":"check-in",
 				"card": {
 					"title":"check-in",
-					"date":"2015-08-20",
+					"date":"2015-08-21",
 					"time":"22.05",
 					"location":"Copenhagen Airport"
 				}
@@ -661,18 +724,18 @@
 		},{
 			"type":"travel",
 			"lifespan": {
-				"from":"2015-08-20T22:50",
-				"to":"2015-08-21T00:25"
+				"from":"2015-08-21T22:50",
+				"to":"2015-08-22T00:25"
 			},
 			"info": {
 				"type":"flight",
 				"depart": {
-					"date":"2015-08-20",
+					"date":"2015-08-21",
 					"time":"22.50",
 					"location":"Copenhagen Airport"
 				},
 				"arrive":{
-					"date":"2015-08-21",
+					"date":"2015-08-22",
 					"time":"00.25",
 					"location":"Trondheim Airport"
 				}
@@ -680,29 +743,46 @@
 		},{
 			"type":"travel",
 			"lifespan": {
-				"from":"2015-08-21T00:25",
-				"to":"2015-08-21T01:00"
+				"from":"2015-08-22T00:25",
+				"to":"2015-08-22T01:00"
 			},
 			"info": {
 				"type":"bus",
 				"depart": {
-					"date":"2015-08-21",
+					"date":"2015-08-22",
 					"time":"00.25",
 					"location":"Trondheim Airport",
 					"description":"Public transport home or office"
 				},
 				"arrive":{
-					"date":"2015-08-21",
+					"date":"2015-08-22",
 					"time":"01.00",
 					"location":"Home or office"
 				}
 			}
 		}]
 	}],
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	"agenda":[{
 		"type":"event",
 		"lifespan": {
-			"from":"2015-08-19T13:00",
+			"from":"2015-08-20T13:00",
 			"to":"2015-08-20T13:10"
 		},
 		"info": {
@@ -713,33 +793,37 @@
 				"description":"",
 				"location":"Auditorium",
 				"details": {
-					"image":""
+					"title":"Arrival",
+					"description":"There is a wardrobe is available with space for storage of small luggage etc.",
+					"image":"images/alnarp-auditorium.jpg"
 				}
 			}
 		}
 	},{
 		"type":"event",
 		"lifespan": {
-			"from":"2015-08-19T13:10",
-			"to":"2015-08-19T15:00"
+			"from":"2015-08-20T13:10",
+			"to":"2015-08-20T15:00"
 		},
 		"info": {
 			"type":"dine",
 			"card": {
 				"time":"13.10",
 				"title":"Lunch",
-				"description":"Depending on the weather, we do lunch inside (Loft) or outside (Park)",
-				"location":"Loft or Park",
+				"description":"",
+				"location":"Park",
 				"details": {
-					"image":""
+					"title":"Lunch",
+					"description":"Lunch is served in the picnic area behind the castle 13.00 – 15.00. Follow the map route to get there, but watch out for cars as these are trafficked streets. A: Alnarpsgården B: The picnic area",
+					"image":"images/alnarp-map.jpg"
 				}
 			}
 		}
 	},{
 		"type":"event",
 		"lifespan": {
-			"from":"2015-08-19T15:00",
-			"to":"2015-08-19T15:10"
+			"from":"2015-08-20T15:00",
+			"to":"2015-08-20T15:10"
 		},
 		"info": {
 			"type":"presentation",
@@ -749,15 +833,17 @@
 				"description":"",
 				"location":"Auditorium",
 				"details": {
-					"image":""
+					"title":"Auditorium",
+					"description":"Find your way back and get the best seat!",
+					"image":"images/alnarp-auditorium.jpg"
 				}
 			}
 		}
 	},{
 		"type":"event",
 		"lifespan": {
-			"from":"2015-08-19T15:10",
-			"to":"2015-08-19T15:15"
+			"from":"2015-08-20T15:10",
+			"to":"2015-08-20T15:15"
 		},
 		"info": {
 			"type":"presentation",
@@ -767,15 +853,17 @@
 				"description":"",
 				"location":"Auditorium",
 				"details": {
-					"image":""
+					"title":"Auditorium",
+					"description":"",
+					"image":"images/alnarp-auditorium.jpg"
 				}
 			}
 		}
 	},{
 		"type":"event",
 		"lifespan": {
-			"from":"2015-08-19T15:15",
-			"to":"2015-08-19T15:20"
+			"from":"2015-08-20T15:15",
+			"to":"2015-08-20T15:20"
 		},
 		"info": {
 			"type":"presentation",
@@ -785,249 +873,57 @@
 				"description":"",
 				"location":"Auditorium",
 				"details": {
-					"image":""
+					"title":"Auditorium",
+					"description":"",
+					"image":"images/alnarp-auditorium.jpg"
 				}
 			}
 		}
 	},{
 		"type":"event",
 		"lifespan": {
-			"from":"2015-08-19T15:20",
-			"to":"2015-08-19T15:30"
+			"from":"2015-08-20T15:20",
+			"to":"2015-08-20T16:25"
 		},
 		"info": {
 			"type":"presentation",
 			"card": {
 				"time":"15.20",
-				"title":"Presentation",
+				"title":"Presentations",
 				"description":"",
 				"location":"Auditorium",
 				"details": {
-					"image":""
+					"title":"Auditorium",
+					"description":"",
+					"image":"images/alnarp-auditorium.jpg"
 				}
 			}
 		}
 	},{
 		"type":"event",
 		"lifespan": {
-			"from":"2015-08-19T15:30",
-			"to":"2015-08-19T15:40"
-		},
-		"info": {
-			"type":"presentation",
-			"card": {
-				"time":"15.30",
-				"title":"Presentation",
-				"description":"",
-				"location":"Auditorium",
-				"details": {
-					"image":""
-				}
-			}
-		}
-	},{
-		"type":"event",
-		"lifespan": {
-			"from":"2015-08-19T15:40",
-			"to":"2015-08-19T15:50"
-		},
-		"info": {
-			"type":"presentation",
-			"card": {
-				"time":"15.40",
-				"title":"Presentation",
-				"description":"",
-				"location":"Auditorium",
-				"details": {
-					"image":""
-				}
-			}
-		}
-	},{
-		"type":"event",
-		"lifespan": {
-			"from":"2015-08-19T15:50",
-			"to":"2015-08-19T15:55"
-		},
-		"info": {
-			"type":"presentation",
-			"card": {
-				"time":"15.50",
-				"title":"Presentation",
-				"description":"",
-				"location":"Auditorium",
-				"details": {
-					"image":""
-				}
-			}
-		}
-	},{
-		"type":"event",
-		"lifespan": {
-			"from":"2015-08-19T15:55",
-			"to":"2015-08-19T16:00"
-		},
-		"info": {
-			"type":"presentation",
-			"card": {
-				"time":"15.55",
-				"title":"Presentation",
-				"description":"",
-				"location":"Auditorium",
-				"details": {
-					"image":""
-				}
-			}
-		}
-	},{
-		"type":"event",
-		"lifespan": {
-			"from":"2015-08-19T16:00",
-			"to":"2015-08-19T16:20"
-		},
-		"info": {
-			"type":"presentation",
-			"card": {
-				"time":"16.00",
-				"title":"Presentation",
-				"description":"",
-				"location":"Auditorium",
-				"details": {
-					"image":""
-				}
-			}
-		}
-	},{
-		"type":"event",
-		"lifespan": {
-			"from":"2015-08-19T16:20",
-			"to":"2015-08-19T16:25"
-		},
-		"info": {
-			"type":"presentation",
-			"card": {
-				"time":"16.20",
-				"title":"Presentation",
-				"description":"",
-				"location":"Auditorium",
-				"details": {
-					"image":""
-				}
-			}
-		}
-	},{
-		"type":"event",
-		"lifespan": {
-			"from":"2015-08-19T16:25",
-			"to":"2015-08-19T16:35"
+			"from":"2015-08-20T16:25",
+			"to":"2015-08-20T17:50"
 		},
 		"info": {
 			"type":"presentation",
 			"card": {
 				"time":"16.25",
-				"title":"Office presentations - Intro",
+				"title":"Office presentations",
 				"description":"",
 				"location":"Auditorium",
 				"details": {
-					"image":""
+					"title":"Auditorium",
+					"description":"",
+					"image":"images/alnarp-auditorium.jpg"
 				}
 			}
 		}
 	},{
 		"type":"event",
 		"lifespan": {
-			"from":"2015-08-19T16:35",
-			"to":"2015-08-19T16:50"
-		},
-		"info": {
-			"type":"presentation",
-			"card": {
-				"time":"16.35",
-				"title":"Stockholm office presentation",
-				"description":"",
-				"location":"Auditorium",
-				"details": {
-					"image":""
-				}
-			}
-		}
-	},{
-		"type":"event",
-		"lifespan": {
-			"from":"2015-08-19T16:50",
-			"to":"2015-08-19T17:05"
-		},
-		"info": {
-			"type":"presentation",
-			"card": {
-				"time":"16.50",
-				"title":"Trondheim office presentation",
-				"description":"",
-				"location":"Auditorium",
-				"details": {
-					"image":""
-				}
-			}
-		}
-	},{
-		"type":"event",
-		"lifespan": {
-			"from":"2015-08-19T17:05",
-			"to":"2015-08-19T17:20"
-		},
-		"info": {
-			"type":"presentation",
-			"card": {
-				"time":"17.05",
-				"title":"Malmö office presentation",
-				"description":"",
-				"location":"Auditorium",
-				"details": {
-					"image":""
-				}
-			}
-		}
-	},{
-		"type":"event",
-		"lifespan": {
-			"from":"2015-08-19T17:20",
-			"to":"2015-08-19T17:35"
-		},
-		"info": {
-			"type":"presentation",
-			"card": {
-				"time":"17.20",
-				"title":"Copenhagen office presentation",
-				"description":"",
-				"location":"Auditorium",
-				"details": {
-					"image":""
-				}
-			}
-		}
-	},{
-		"type":"event",
-		"lifespan": {
-			"from":"2015-08-19T17:35",
-			"to":"2015-08-19T17:50"
-		},
-		"info": {
-			"type":"presentation",
-			"card": {
-				"time":"17.35",
-				"title":"Gothenborg office presentation",
-				"description":"",
-				"location":"Auditorium",
-				"details": {
-					"image":""
-				}
-			}
-		}
-	},{
-		"type":"event",
-		"lifespan": {
-			"from":"2015-08-19T17:50",
-			"to":"2015-08-19T18:00"
+			"from":"2015-08-20T17:50",
+			"to":"2015-08-20T18:00"
 		},
 		"info": {
 			"type":"presentation",
@@ -1037,15 +933,17 @@
 				"description":"",
 				"location":"Auditorium",
 				"details": {
-					"image":""
+					"title":"Auditorium",
+					"description":"",
+					"image":"images/alnarp-auditorium.jpg"
 				}
 			}
 		}
 	},{
 		"type":"event",
 		"lifespan": {
-			"from":"2015-08-19T19:00",
-			"to":"2015-08-19T19:30"
+			"from":"2015-08-20T19:00",
+			"to":"2015-08-20T19:30"
 		},
 		"info": {
 			"type":"dine",
@@ -1055,15 +953,17 @@
 				"description":"",
 				"location":"Park",
 				"details": {
-					"image":""
+					"title":"Predinner drink at the barbeque",
+					"description":"It's time to move, get down to the castle and grab a drink!",
+					"image":"images/alnarp-map.jpg"
 				}
 			}
 		}
 	},{
 		"type":"event",
 		"lifespan": {
-			"from":"2015-08-19T19:30",
-			"to":"2015-08-19T20:00"
+			"from":"2015-08-20T19:30",
+			"to":"2015-08-20T20:00"
 		},
 		"info": {
 			"type":"dine",
@@ -1073,15 +973,17 @@
 				"description":"",
 				"location":"Loft",
 				"details": {
-					"image":""
+					"title":"Dinner",
+					"description":"Find your way to the Loft",
+					"image":"images/alnarp-loft.jpg"
 				}
 			}
 		}
 	},{
 		"type":"event",
 		"lifespan": {
-			"from":"2015-08-19T20:00",
-			"to":"2015-08-19T21:00"
+			"from":"2015-08-20T20:00",
+			"to":"2015-08-20T21:00"
 		},
 		"info": {
 			"type":"presentation",
@@ -1091,15 +993,17 @@
 				"description":"",
 				"location":"Loft",
 				"details": {
-					"image":""
+					"title":"The Loft",
+					"description":"",
+					"image":"images/alnarp-loft.jpg"
 				}
 			}
 		}
 	},{
 		"type":"event",
 		"lifespan": {
-			"from":"2015-08-19T22:00",
-			"to":"2015-08-19T24:00"
+			"from":"2015-08-20T22:00",
+			"to":"2015-08-20T24:00"
 		},
 		"info": {
 			"type":"presentation",
@@ -1109,15 +1013,17 @@
 				"description":"Time depends on when toastmaster decide",
 				"location":"Loft",
 				"details": {
-					"image":""
+					"title":"The Loft",
+					"description":"",
+					"image":"images/alnarp-loft.jpg"
 				}
 			}
 		}
 	},{
 		"type":"event",
 		"lifespan": {
-			"from":"2015-08-20T00:00",
-			"to":"2015-08-20T01:45"
+			"from":"2015-08-21T00:00",
+			"to":"2015-08-21T01:00"
 		},
 		"info": {
 			"type":"dine",
@@ -1127,7 +1033,9 @@
 				"description":"",
 				"location":"Loft",
 				"details": {
-					"image":""
+					"title":"The Loft",
+					"description":"",
+					"image":"images/alnarp-loft.jpg"
 				}
 			}
 		}
