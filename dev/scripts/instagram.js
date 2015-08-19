@@ -20,7 +20,7 @@ define([
 		CLIENT_ID: 'a90c4fd61c0c4d91be39b574b06fd562',
 		TARGET_ID: 'instafeed',
 
-		HASHTAG: 'digitaslbi',
+		HASHTAG: 'dlbibbq',
 
 		init: function($elem) {
 			this.$elem = $elem;
@@ -66,15 +66,23 @@ define([
 
 				limit: 60,
 
-				after: $.proxy(this.onFetchSuccess, this)
+				after: $.proxy(this.onFetchSuccess, this),
+
+				error: $.proxy(this.onFetchError, this)
 			});
 
 			this.feed.run();
 		},
 
 		onFetchSuccess: function() {
+			this.$elem.find('.error').addClass('hide');
 			this.$elem.find('[data-fixed-loader]').hide();
 			this.$elem.find('.show-more').removeClass('loading').toggleClass('visible', this.feed.hasNext());
+		},
+
+		onFetchError: function(e) {
+			this.$elem.find('.error').removeClass('hide');
+			this.$elem.find('[data-fixed-loader]').hide();
 		},
 
 		onMoreClickHandler: function() {

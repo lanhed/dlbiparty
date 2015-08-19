@@ -242,6 +242,15 @@ ul.card-wrapper li .card .section.arrival .details {
   display: block;
 }
 
+.instagram .error {
+  padding: 20px;
+}
+
+.instagram .error img {
+  width: 100%;
+  padding-bottom: 30px;
+}
+
 .info {
   padding: 20px;
 }
