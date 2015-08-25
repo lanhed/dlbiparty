@@ -830,7 +830,7 @@
 			"type":"presentation",
 			"card": {
 				"time":"15.00",
-				"title":"Start",
+				"title":"Nordic presentations begins",
 				"description":"",
 				"location":"Auditorium",
 				"details": {
@@ -843,19 +843,19 @@
 	},{
 		"type":"event",
 		"lifespan": {
-			"from":"2015-08-21T15:10",
-			"to":"2015-08-21T15:15"
+			"from":"2015-08-21T16:20",
+			"to":"2015-08-21T16:50"
 		},
 		"info": {
 			"type":"presentation",
 			"card": {
-				"time":"15.10",
-				"title":"Welcome",
+				"time":"16.20",
+				"title":"Break",
 				"description":"",
 				"location":"Auditorium",
 				"details": {
 					"title":"Auditorium",
-					"description":"",
+					"description":"Find your way back and get the best seat!",
 					"image":"images/alnarp-auditorium.jpg"
 				}
 			}
@@ -863,53 +863,13 @@
 	},{
 		"type":"event",
 		"lifespan": {
-			"from":"2015-08-21T15:15",
-			"to":"2015-08-21T15:20"
+			"from":"2015-08-21T16:50",
+			"to":"2015-08-21T18:30"
 		},
 		"info": {
 			"type":"presentation",
 			"card": {
-				"time":"15.15",
-				"title":"Film",
-				"description":"",
-				"location":"Auditorium",
-				"details": {
-					"title":"Auditorium",
-					"description":"",
-					"image":"images/alnarp-auditorium.jpg"
-				}
-			}
-		}
-	},{
-		"type":"event",
-		"lifespan": {
-			"from":"2015-08-21T15:20",
-			"to":"2015-08-21T16:25"
-		},
-		"info": {
-			"type":"presentation",
-			"card": {
-				"time":"15.20",
-				"title":"Presentations",
-				"description":"",
-				"location":"Auditorium",
-				"details": {
-					"title":"Auditorium",
-					"description":"",
-					"image":"images/alnarp-auditorium.jpg"
-				}
-			}
-		}
-	},{
-		"type":"event",
-		"lifespan": {
-			"from":"2015-08-21T16:25",
-			"to":"2015-08-21T17:50"
-		},
-		"info": {
-			"type":"presentation",
-			"card": {
-				"time":"16.25",
+				"time":"16.50",
 				"title":"Office presentations",
 				"description":"",
 				"location":"Auditorium",
@@ -923,34 +883,14 @@
 	},{
 		"type":"event",
 		"lifespan": {
-			"from":"2015-08-21T17:50",
-			"to":"2015-08-21T18:00"
-		},
-		"info": {
-			"type":"presentation",
-			"card": {
-				"time":"17.50",
-				"title":"Wrap up - Presentation Toastmaster",
-				"description":"",
-				"location":"Auditorium",
-				"details": {
-					"title":"Auditorium",
-					"description":"",
-					"image":"images/alnarp-auditorium.jpg"
-				}
-			}
-		}
-	},{
-		"type":"event",
-		"lifespan": {
 			"from":"2015-08-21T19:00",
-			"to":"2015-08-21T19:30"
+			"to":"2015-08-21T19:45"
 		},
 		"info": {
 			"type":"dine",
 			"card": {
 				"time":"19.00",
-				"title":"Predinner drink at the barbeque",
+				"title":"Predinner drink in the park",
 				"description":"",
 				"location":"Park",
 				"details": {
@@ -963,8 +903,8 @@
 	},{
 		"type":"event",
 		"lifespan": {
-			"from":"2015-08-21T19:30",
-			"to":"2015-08-21T20:00"
+			"from":"2015-08-21T19:45",
+			"to":"2015-08-22T00:00"
 		},
 		"info": {
 			"type":"dine",
@@ -976,46 +916,6 @@
 				"details": {
 					"title":"Dinner",
 					"description":"Find your way to the Loft",
-					"image":"images/alnarp-loft.jpg"
-				}
-			}
-		}
-	},{
-		"type":"event",
-		"lifespan": {
-			"from":"2015-08-21T20:00",
-			"to":"2015-08-21T21:00"
-		},
-		"info": {
-			"type":"presentation",
-			"card": {
-				"time":"20.00",
-				"title":"Toastmaster",
-				"description":"",
-				"location":"Loft",
-				"details": {
-					"title":"The Loft",
-					"description":"",
-					"image":"images/alnarp-loft.jpg"
-				}
-			}
-		}
-	},{
-		"type":"event",
-		"lifespan": {
-			"from":"2015-08-21T22:00",
-			"to":"2015-08-21T24:00"
-		},
-		"info": {
-			"type":"presentation",
-			"card": {
-				"time":"22.00",
-				"title":"DJ",
-				"description":"Time depends on when toastmaster decide",
-				"location":"Loft",
-				"details": {
-					"title":"The Loft",
-					"description":"",
 					"image":"images/alnarp-loft.jpg"
 				}
 			}

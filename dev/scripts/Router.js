@@ -95,7 +95,7 @@ define([
 		var id = event.detail.cardId;
 		var cardType = event.detail.cardType;
 		var cardData = DataService().getCardDataFromId(id);
-		console.log(id, cardType, cardData);
+		
 		var data = null;
 		if (cardType === 'depart') {
 			data = cardData.info.depart.details;

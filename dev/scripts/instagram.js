@@ -20,7 +20,7 @@ define([
 		CLIENT_ID: 'a90c4fd61c0c4d91be39b574b06fd562',
 		TARGET_ID: 'instafeed',
 
-		HASHTAG: 'dlbibbq',
+		HASHTAG: 'digitaslbibbq',
 
 		init: function($elem) {
 			this.$elem = $elem;
